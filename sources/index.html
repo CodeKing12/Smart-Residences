@@ -48,7 +48,7 @@
         <img class="absolute top-0 right-0 z-[200]" src="images/bg-lines-1.svg">
         <img class="absolute mt-[390px] z-[200]" src="images/bg-lines-2.svg">
         <nav>
-            <div class="flex justify-between px-28 pt-5 pb-5 border-b-[1.7px] border-opacity-50 items-center">
+            <div class="flex justify-between px-16 lg:20 xl:px-28 pt-5 pb-5 border-b-[1.7px] border-opacity-50 items-center">
                 <div class="logo">
                   <img src="images/logo.png">
                 </div>
@@ -72,26 +72,41 @@
               </div>
         </nav>
 
-        <div class="py-24 pl-28 pr-20 flex justify-between header-slick">
+        <div class="py-24 pl-28 pr-20 flex justify-between slick-slider">
             <div class="!flex justify-between">
                 <div class="w-7/12">
-                    <h4 class="text-2xl font-rancho font-medium text-purple">Mapping Solution that works</h4>
-                    <h2 class="text-6xl font-lato leading-snug font-extrabold">Tag Your <span class="text-brand-gradient">Residence</span><br> in its Place</h2>
+                    <div class="flex header-slick">
+                        <div class="">
+                            <h4 class="text-2xl font-rancho font-medium text-purple">Mapping Solution that works</h4>
+                            <h2 class="text-6xl font-lato leading-snug font-extrabold">Tag Your <span class="text-brand-gradient">Residence</span><br> in its Place</h2>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-rancho font-medium text-purple">Mapping Solution that works</h4>
+                            <h2 class="text-6xl font-lato leading-snug font-extrabold">Manage Activities <br> within the <span class="text-brand-gradient">Estate</span></h2>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-rancho font-medium text-purple">Mapping Solution that works</h4>
+                            <h2 class="text-6xl font-lato leading-snug font-extrabold">Pay <span class="text-brand-gradient">Utility Bills</span><br> within your Wallet</h2>
+                        </div>
+                    </div>
                     <div class="flex items-center mt-6">
-                        <input class="w-full font-lato px-5 text-base py-3 border border-black border-opacity-30 focus-visible:outline-0 focus-visible:border-2 focus-visible:border-purple" required type="text" placeholder="Find a location or search an ID">
-                        <span class="relative border border-opacity-40 w-px right-16 h-8"></span>
-                        <img class="relative right-12" src="images/search.svg">
+                        <input class="z-[300] w-full font-lato px-5 text-base py-3 border border-black border-opacity-30 focus-visible:outline-0 focus-visible:border-2 focus-visible:border-purple" required type="text" placeholder="Find a location or search an ID">
+                        <span class="z-[300] relative border border-opacity-40 w-px right-16 h-8"></span>
+                        <img class="z-[300] relative right-12" src="images/search.svg">
                     </div>
                     <div class="flex mt-20 items-center">
-                        <button class="flex text-white font-semibold items-center border-2 border-purple bg-purple hover:bg-white hover:text-purple group pl-12 pr-6 py-5 transition-colors hover:transition-colors duration-400 hover:duration-400">
+                        <button class="z-[300] flex text-white font-semibold items-center border-2 border-purple bg-purple hover:bg-white hover:text-purple group pl-12 pr-6 py-5 transition-colors hover:transition-colors duration-400 hover:duration-400">
                             Explore Us
                             <img class="ml-5 group-hover:hidden" src="images/right-arrow.svg">
                             <img class="ml-5 hidden group-hover:inline" src="images/right-arrow-light.svg">
                         </button>
-                        <div class="ml-20 h-fit flex items-center rounded-full border border-purple">
-                            <img class="p-6" src="images/play.svg">
+                        <div class="z-[300] ml-20 h-fit flex items-center rounded-full border border-purple hover:bg-purple group transition-all hover:transition-all duration-300 hover:duration-150">
+                            <a href="#">
+                                <img class="p-6 group-hover:hidden" src="images/play.svg">
+                                <img class="p-6 hidden group-hover:inline" src="images/play-white.svg">
+                            </a>
                         </div>
-                        <h4 class="ml-6 text-base text-purple font-bold">Watch Video</h4>
+                        <h4 class="z-[300] ml-6 text-base text-purple font-bold"><a href="#">Watch Video</a></h4>
                     </div>
                     <div class="flex mt-40">
                         <h4 class="text-purple font-medium">Connect with us:</h4>
@@ -101,71 +116,9 @@
                         <img class="ml-7" src="images/linkedin.svg">
                     </div>
                 </div>
-                <div class="w-5/12">
+                <div class="w-5/12 image-slider">
                     <img src="images/header-gif-1.gif">
-                </div>
-            </div>
-            <div class="!flex justify-between">
-                <div class="w-7/12">
-                    <h4 class="text-2xl font-rancho font-medium text-purple">Mapping Solution that works</h4>
-                    <h2 class="text-6xl font-lato leading-snug font-extrabold">Manage Activities <br> within the <span class="text-brand-gradient">Estate</span></h2>
-                    <div class="flex items-center mt-8">
-                        <input class="w-full font-lato px-5 text-base py-3 border border-black border-opacity-30 focus-visible:outline-0 focus-visible:border-2 focus-visible:border-purple" required type="text" placeholder="Find a location or search an ID">
-                        <span class="relative border border-opacity-40 w-px right-16 h-8"></span>
-                        <img class="relative right-12" src="images/search.svg">
-                    </div>
-                    <div class="flex mt-20 items-center">
-                        <button class="flex text-white font-semibold items-center border-2 border-purple bg-purple hover:bg-white hover:text-purple group pl-12 pr-6 py-5 transition-colors hover:transition-colors duration-200 hover:duration-200">
-                            Explore Us
-                            <img class="ml-5 group-hover:hidden" src="images/right-arrow.svg">
-                            <img class="ml-5 hidden group-hover:inline" src="images/right-arrow-light.svg">
-                        </button>
-                        <div class="ml-20 h-fit flex items-center rounded-full border border-purple">
-                            <img class="p-6" src="images/play.svg">
-                        </div>
-                        <h4 class="ml-6 text-base text-purple font-bold">Watch Video</h4>
-                    </div>
-                    <div class="flex mt-40">
-                        <h4 class="text-purple font-medium">Connect with us:</h4>
-                        <img class="ml-7" src="images/facebook.svg">
-                        <img class="ml-7" src="images/twitter.svg">
-                        <img class="ml-7" src="images/instagram.svg">
-                        <img class="ml-7" src="images/linkedin.svg">
-                    </div>
-                </div>
-                <div class="w-5/12">
                     <img src="images/header-img-2.svg">
-                </div>
-            </div>
-            <div class="!flex justify-between">
-                <div class="w-7/12">
-                    <h4 class="text-2xl font-rancho font-medium text-purple">Mapping Solution that works</h4>
-                    <h2 class="text-6xl font-lato leading-snug font-extrabold">Pay <span class="text-brand-gradient">Utility Bills</span><br> within your Wallet</h2>
-                    <div class="flex items-center mt-6">
-                        <input class="w-full font-lato px-5 text-base py-3 border border-black border-opacity-30 focus-visible:outline-0 focus-visible:border-2 focus-visible:border-purple" required type="text" placeholder="Find a location or search an ID">
-                        <span class="relative border border-opacity-40 w-px right-16 h-8"></span>
-                        <img class="relative right-12" src="images/search.svg">
-                    </div>
-                    <div class="flex mt-20 items-center">
-                        <button class="flex text-white font-semibold items-center border-2 border-purple bg-purple hover:bg-white hover:text-purple group pl-12 pr-6 py-5 transition-colors hover:transition-colors duration-200 hover:duration-200">
-                            Explore Us
-                            <img class="ml-5 group-hover:hidden" src="images/right-arrow.svg">
-                            <img class="ml-5 hidden group-hover:inline" src="images/right-arrow-light.svg">
-                        </button>
-                        <div class="ml-20 h-fit flex items-center rounded-full border border-purple">
-                            <img class="p-6" src="images/play.svg">
-                        </div>
-                        <h4 class="ml-6 text-base text-purple font-bold">Watch Video</h4>
-                    </div>
-                    <div class="flex mt-40">
-                        <h4 class="text-purple font-medium">Connect with us:</h4>
-                        <img class="ml-7" src="images/facebook.svg">
-                        <img class="ml-7" src="images/twitter.svg">
-                        <img class="ml-7" src="images/instagram.svg">
-                        <img class="ml-7" src="images/linkedin.svg">
-                    </div>
-                </div>
-                <div class="w-5/12">
                     <img src="images/header-gif-2.gif">
                 </div>
             </div>
