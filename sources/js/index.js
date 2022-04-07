@@ -26,9 +26,13 @@ $(document).ready(function() {
         asNavFor: '.header-slick',
     })
 
-    // $(".owl-header").owlCarousel({
-    //     items: 1,
-    //     animateOut: 'fadeOut',
-    //     loop: true,
-    // })
-})
+
+});
+
+function openMenu() {
+    document.getElementById("menu").style.height = "100%";
+}
+
+function closeMenu() {
+    document.getElementById("menu").style.height = "0";
+}

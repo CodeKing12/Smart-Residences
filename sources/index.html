@@ -42,59 +42,79 @@
             color: #fff
         }
     </style>
+
+    <script>
+        
+    </script>
 </head>
 <body class="font-lato">
     <header class="">
-        <img class="absolute top-0 right-0 z-[200]" src="images/bg-lines-1.svg">
+        <img class="absolute hidden md:block md:top-0 md:right-0 -top-[80px] -right-[200px] z-[200]" src="images/bg-lines-1.svg">
         <img class="absolute mt-[390px] z-[200]" src="images/bg-lines-2.svg">
-        <nav>
-            <div class="flex justify-between px-16 lg:20 xl:px-28 pt-5 pb-5 border-b-[1.7px] border-opacity-50 items-center">
-                <div class="logo">
-                  <img src="images/logo.png">
+        <nav class="z-[300]">
+            <div class="flex justify-between px-6 xs:px-16 lg:px-20 xl:px-28 pt-5 pb-5 border-b-[1.7px] border-opacity-50 items-center">
+                <div class="logo z-[300]">
+                  <img class="z-[300]" src="images/logo.png">
                 </div>
               
-                <div class="flex ml-10">
-                  <h4 class="font-lato mr-10 font-semibold text-purple"><a href="#"> Home </a></h4>
-                  <h4 class="font-lato mr-10 font-medium"><a href="#"> Shop </a></h4>
-                  <h4 class="font-lato mr-10 font-medium">Pricing</h4>
-                  <h4 class="font-lato font-medium"><a href="#"> Demo </a></h4>
+                <div class="lg:flex ml-6 hidden">
+                  <h4 class="font-lato lg:mr-6 xl:mr-10 font-semibold text-purple z-[300]"><a href="#"> Home </a></h4>
+                  <h4 class="font-lato lg:mr-6 xl:mr-10 font-medium z-[300]"><a href="#"> Shop </a></h4>
+                  <h4 class="font-lato lg:mr-6 xl:mr-10 font-medium z-[300]">Pricing</h4>
+                  <h4 class="font-lato font-medium z-[300]"><a href="#"> Demo </a></h4>
                 </div>
               
-                <div class="flex items-center">
-                  <input class="w-56 font-lato px-5 text-sm py-2 border border-black border-opacity-30 focus-visible:outline-0 focus-visible:border-2 focus-visible:border-purple" type="text" placeholder="Search Anything" />
+                <div class="items-center lg:flex hidden">
+                  <input class="w-56 font-lato px-5 text-sm py-2 border border-black border-opacity-30 focus-visible:outline-0 focus-visible:border-2 focus-visible:border-purple z-[300]" type="text" placeholder="Search Anything" />
                   <span class="relative border border-opacity-40 w-px right-16 h-6"></span>
-                  <img class="relative right-12" src="images/search.svg">
+                  <img class="relative z-[300] right-12" src="images/search.svg">
                 </div>
 
-                <button class="px-14 py-[10px] bg-black font-normal text-white">
+                <button class="z-[300] px-14 py-[10px] bg-black font-normal text-white lg:flex hidden">
                     Login
                 </button>
+
+                <svg class="hamburger z-[500] flex lg:hidden w-8" onclick="openMenu()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+                <!-- <svg class="flex lg:hidden" id="svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0, 0, 400,400"><g id="svgg"><path id="path0" d="M30.630 19.942 C -6.899 28.091,-10.949 80.228,24.824 94.678 L 29.297 96.484 200.000 96.484 L 370.703 96.484 375.176 94.678 C 411.166 80.140,406.859 27.928,369.008 19.908 C 361.258 18.266,38.199 18.298,30.630 19.942 M28.516 162.416 C -10.107 173.677,-9.421 227.757,29.472 237.835 C 36.694 239.706,363.306 239.706,370.528 237.835 C 409.869 227.640,409.869 172.360,370.528 162.165 C 362.855 160.177,35.371 160.417,28.516 162.416 M26.384 304.953 C -11.082 317.748,-7.763 371.881,30.992 380.092 C 39.006 381.790,360.994 381.790,369.008 380.092 C 406.859 372.072,411.166 319.860,375.176 305.322 L 370.703 303.516 201.172 303.337 L 31.641 303.158 26.384 304.953 " stroke="none" fill="#000000" fill-rule="evenodd"></path></g></svg> -->
+                <!-- <img onclick="openmenu" class="w-10 " src="images/hamburger.png"> -->
               </div>
         </nav>
 
-        <div class="py-24 pl-28 pr-20 flex justify-between slick-slider">
-            <div class="!flex justify-between">
-                <div class="w-7/12">
+        <div id="menu" class="bg-white menu z-[999] w-full h-0 fixed left-0 top-0 overflow-hidden transition-all duration-500">
+
+            <a href="javascript:void(0)" class="absolute top-5 right-11 text-4xl" onclick="closeMenu()">&times;</a>
+
+            <ul>
+                <li>Home</li>
+                <li>Shop</li>
+                <li>Pricing</li>
+                <li>Demo</li>
+            </ul>
+        </div>
+
+        <div class="py-14 xs:py-20 md:py-24 px-5 xs:pl-14 xs:pr-12 sm:pl-16 sm:pr-14 lg:pl-20 lg:pr-16 xl:pl-28 xl:pr-20 flex justify-between slick-slider">
+            <div class="!flex justify-between flex-col sm:flex-row">
+                <div class="w-full sm:w-7/12">
                     <div class="flex header-slick">
                         <div class="">
                             <h4 class="text-2xl font-rancho font-medium text-purple">Mapping Solution that works</h4>
-                            <h2 class="text-6xl font-lato leading-snug font-extrabold">Tag Your <span class="text-brand-gradient">Residence</span><br> in its Place</h2>
+                            <h2 class="text-[32px] sm:text-[42px] md:text-[47px] lg:text-6xl font-lato leading-snug font-extrabold">Tag Your <span class="text-brand-gradient">Residence</span><br class=""> in its Place</h2>
                         </div>
                         <div>
                             <h4 class="text-2xl font-rancho font-medium text-purple">Mapping Solution that works</h4>
-                            <h2 class="text-6xl font-lato leading-snug font-extrabold">Manage Activities <br> within the <span class="text-brand-gradient">Estate</span></h2>
+                            <h2 class="text-[32px] sm:text-[42px] md:text-[47px] lg:text-6l font-lato leading-snug font-extrabold">Manage Activities <br> within the <span class="text-brand-gradient">Estate</span></h2>
                         </div>
                         <div>
                             <h4 class="text-2xl font-rancho font-medium text-purple">Mapping Solution that works</h4>
-                            <h2 class="text-6xl font-lato leading-snug font-extrabold">Pay <span class="text-brand-gradient">Utility Bills</span><br> within your Wallet</h2>
+                            <h2 class="text-[32px] sm:text-[42px] md:text-[47px] lg:text-6l font-lato leading-snug font-extrabold">Pay <span class="text-brand-gradient">Utility Bills</span><br> within your Wallet</h2>
                         </div>
                     </div>
-                    <div class="flex items-center mt-6">
+                    <div class="flex items-center mt-8">
                         <input class="z-[300] w-full font-lato px-5 text-base py-3 border border-black border-opacity-30 focus-visible:outline-0 focus-visible:border-2 focus-visible:border-purple" required type="text" placeholder="Find a location or search an ID">
                         <span class="z-[300] relative border border-opacity-40 w-px right-16 h-8"></span>
                         <img class="z-[300] relative right-12" src="images/search.svg">
                     </div>
-                    <div class="flex mt-20 items-center">
+                    <div class="flex flex-col md:flex-row mt-28 lg:mt-20 items-center">
                         <button class="z-[300] flex text-white font-semibold items-center border-2 border-purple bg-purple hover:bg-white hover:text-purple group pl-12 pr-6 py-5 transition-colors hover:transition-colors duration-400 hover:duration-400">
                             Explore Us
                             <img class="ml-5 group-hover:hidden" src="images/right-arrow.svg">
@@ -116,7 +136,7 @@
                         <img class="ml-7" src="images/linkedin.svg">
                     </div>
                 </div>
-                <div class="w-5/12 image-slider">
+                <div class="w-full sm:w-5/12 image-slider order-first sm:order-last">
                     <img src="images/header-gif-1.gif">
                     <img src="images/header-img-2.svg">
                     <img src="images/header-gif-2.gif">
@@ -136,7 +156,7 @@
             </div>
         </div>
 
-        <div class="flex mt-1">
+        <div class="flex flex-col lg:flex-row mt-1">
             <div class="bg-white p-12 rounded-xl shadow-[0_4px_34px_rgba(255,255,255,0.3)] text-black">
                 <h5 class="text-lg font-bold flex mb-5">
                     Complete Control
@@ -166,7 +186,7 @@
         <h3 class="px-24 text-5xl text-center font-lato font-extrabold mb-6">Smart Residence <span class="text-purple">Features</span></h3>
         <p class="px-24 font-lato w-10/12 text-center font-light text-lg leading-8 mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis ac ligula nullam eget id euismod neque etiam nisl. Id nulla sed elementum adipiscing sit turpis nam. Egestas pellentesque phasellus enim purus, praesent est elit enim. Pharetra at non dui nec. Sed sit etiam ac dignissim ut.</p>
         
-        <div class="flex items-baseline mt-16 px-20">
+        <div class="flex flex-col md:flex-row items-baseline mt-16 px-20">
             <div class="flex flex-col justify-center items-center w-1/3">
                 <!-- <img class="w-[170px] mb-4" src="images/section-3-gif-1.gif"> -->
                 <img class="w-[170px] mb-4" src="images/section-3-img-1.svg">
@@ -203,7 +223,7 @@
             <div class="w-6/12 ml-auto">
                 <p class="text-xl font-light leading-8">Our support team will get assistance from AI-powered suggestions, making it quicker than ever to handle support requests. Our support team will get assistance from AI-powered suggestions.</p>
                 <p class="font-lato font-semibold my-10 text-[19px]">Available for download</p>
-                <div class="flex">
+                <div class="flex flex-col md:flex-row">
                     <button class="flex items-center mr-12 border-white border rounded-md py-2 px-5 pr-16 hover:bg-white hover:border-purple hover:font-bold hover:text-purple group transition-all hover:transition-all duration-[400] hover:duration-[400]">
                         <img class="mr-5 group-hover:hidden" src="images/app-store.svg" />
                         <img class="mr-5 hidden group-hover:inline" src="images/app-store-purple.svg" />
@@ -238,10 +258,10 @@
     <section class="px-24 py-20">
         <h3 class="mb-7 font-extrabold text-4xl font-lato">Billboards At <span class="text-purple">Smart Residence</span> Shop</h3>
         <div class="mb-[60px] border border-purple flex px-10 py-6 justify-center">
-            <img class="mr-2" src="images/sign-posts.png">
+            <!-- <img class="mr-2" src="images/sign-posts.png">
             <img class="mr-2" src="images/address-2.png">
             <img class="mr-2" src="images/address-1.png">
-            <img class="w-1/5" src="images/billboard-2.png">
+            <img class="w-1/5" src="images/billboard-2.png"> -->
         </div>
         <button class="flex text-white font-semibold items-center border-2 border-purple bg-purple hover:bg-white hover:font-bold hover:text-purple group px-12 py-3 transition-colors hover:transition-colors duration-400 hover:duration-400">
             Shop Now
@@ -256,7 +276,7 @@
                 <input class="w-4/12 font-lato pl-14 peer px-5 text-base py-[14px] border border-white focus-visible:outline-0 focus-visible:border-2 focus-visible:border-purple bg-transparent" type="text" placeholder="Type in your email address">
                 <button class="flex text-base peer-focus-visible:border-purple text-white font-semibold items-center border border-l-0 border-white bg-purple hover:bg-white hover:font-extrabold hover:text-purple px-12 py-3 transition-colors hover:transition-colors duration-400 hover:duration-400">Subscribe</button>
             </form>
-            <div class="border-y border-y-white mx-24 py-9 flex justify-between px-4">
+            <div class="border-y border-y-white mx-24 py-9 flex justify-between flex-col md:flex-row px-4">
                 <div class="max-w-[33%] mr-5">
                     <img class="mb-6" src="images/logo-round.svg">
                     <p class="mb-10 font-lato font-light text-lg tracking-wider leading-relaxed">Smart Residence is changing the way estate and street owners and street owners interact with their community and fulfill their duties with the least stress.</p>
