@@ -15,17 +15,17 @@
     <header class="">
         <img class="absolute hidden md:block md:top-0 md:right-0 -top-[80px] -right-[200px] z-[200]" src="images/bg-lines-1.svg">
         <img class="absolute mt-[390px] z-[200]" src="images/bg-lines-2.svg">
-        <nav class="z-[600]">
+        <nav class="z-[600]" id="theNav">
             <div class="flex justify-between px-6 xs:px-16 lg:px-20 xl:px-28 pt-5 pb-5 border-b-[1.7px] border-opacity-50 items-center">
                 <div class="logo z-[500]">
                   <img class="z-[500]" src="images/logo.png">
                 </div>
               
                 <div class="lg:flex ml-6 hidden">
-                  <h4 class="font-lato lg:mr-6 xl:mr-10 font-semibold text-purple z-[300]"><a href="#"> Home </a></h4>
-                  <h4 class="font-lato lg:mr-6 xl:mr-10 font-medium z-[300]"><a href="#"> Shop </a></h4>
-                  <h4 class="font-lato lg:mr-6 xl:mr-10 font-medium z-[300]">Pricing</h4>
-                  <h4 class="font-lato font-medium z-[300]"><a href="#"> Demo </a></h4>
+                  <h4 class="font-lato lg:mr-6 xl:mr-10 font-semibold text-purple z-[300]"><a href="index.html#"> Home </a></h4>
+                  <h4 class="font-lato lg:mr-6 xl:mr-10 font-medium z-[300]"><a href="shop.html#"> Shop </a></h4>
+                  <h4 class="font-lato lg:mr-6 xl:mr-10 font-medium z-[300]"><a href="pricing.html#">Pricing</a></h4>
+                  <h4 class="font-lato font-medium z-[300]"><a href="demo.html#"> Demo </a></h4>
                 </div>
               
                 <div class="items-center lg:flex hidden">
@@ -38,27 +38,40 @@
                     Login
                 </button>
 
-                <div class="menu-icon h-8 w-8 mr-5 cursor-pointer" onclick="openMenu()">
-                    <span class="menu-icon__line h-0.5 w-4 block bg-black mb-1 menu-icon__line-left"></span>
-                    <span class="menu-icon__line h-0.5 w-8 block bg-black mb-1"></span>
-                    <span class="menu-icon__line h-0.5 block bg-black mb-1 menu-icon__line-right w-4 float-right"></span>
+                <div class="menu-icon block lg:hidden h-8 w-8 mr-5 hover:cursor-pointer" onclick="openMenu()">
+                    <span class="menu-icon-line h-0.5 w-4 block bg-black mb-1 menu-icon-line-left"></span>
+                    <span class="menu-icon-line h-0.5 w-8 block bg-black mb-1"></span>
+                    <span class="menu-icon-line h-0.5 block bg-black mb-1 menu-icon-line-right w-4 float-right"></span>
                 </div>
-
-                <!-- <svg class="hamburger z-[500] flex lg:hidden w-8" onclick="openMenu()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg> -->
-                <!-- <svg class="flex lg:hidden" id="svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0, 0, 400,400"><g id="svgg"><path id="path0" d="M30.630 19.942 C -6.899 28.091,-10.949 80.228,24.824 94.678 L 29.297 96.484 200.000 96.484 L 370.703 96.484 375.176 94.678 C 411.166 80.140,406.859 27.928,369.008 19.908 C 361.258 18.266,38.199 18.298,30.630 19.942 M28.516 162.416 C -10.107 173.677,-9.421 227.757,29.472 237.835 C 36.694 239.706,363.306 239.706,370.528 237.835 C 409.869 227.640,409.869 172.360,370.528 162.165 C 362.855 160.177,35.371 160.417,28.516 162.416 M26.384 304.953 C -11.082 317.748,-7.763 371.881,30.992 380.092 C 39.006 381.790,360.994 381.790,369.008 380.092 C 406.859 372.072,411.166 319.860,375.176 305.322 L 370.703 303.516 201.172 303.337 L 31.641 303.158 26.384 304.953 " stroke="none" fill="#000000" fill-rule="evenodd"></path></g></svg> -->
-                <!-- <img onclick="openmenu" class="w-10 " src="images/hamburger.png"> -->
               </div>
         </nav>
 
-        <div id="menu" class="bg-white menu z-[999] w-full h-0 fixed left-0 top-0 overflow-hidden transition-all duration-500">
-
-            <a href="javascript:void(0)" class="absolute top-5 right-11 text-4xl" onclick="closeMenu()">&times;</a>
-
-            <ul>
-                <li>Home</li>
-                <li>Shop</li>
-                <li>Pricing</li>
-                <li>Demo</li>
+        <div id="menu" class="bg-purple text-white z-[999] w-full h-0 fixed left-0 top-0 overflow-hidden transition-all duration-500 flex flex-col items-center justify-center">
+            <ul class="mobile-nav-items opacity-100 disappear flex flex-col items-center gap-9 relative bottom-20">
+                <li class="font-semibold text-lg relative">
+                    <a class="flex flex-row gap-4 before:absolute hover:before:bg-white before:w-8 before:bg-purple before:h-0.5 before:top-full before:translate-x-0 before:translate-y-0 before:transition-all before:ease-out before:duration-[350ms] before:-z-index-[1] hover:before:w-full before:mt-2" href="index.html#">
+                        <svg class="w-[30px]" fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M575.8 255.5C575.8 273.5 560.8 287.6 543.8 287.6H511.8L512.5 447.7C512.6 483.2 483.9 512 448.5 512H128.1C92.75 512 64.09 483.3 64.09 448V287.6H32.05C14.02 287.6 0 273.5 0 255.5C0 246.5 3.004 238.5 10.01 231.5L266.4 8.016C273.4 1.002 281.4 0 288.4 0C295.4 0 303.4 2.004 309.5 7.014L416 100.7V64C416 46.33 430.3 32 448 32H480C497.7 32 512 46.33 512 64V185L564.8 231.5C572.8 238.5 576.9 246.5 575.8 255.5L575.8 255.5zM248 192C234.7 192 224 202.7 224 216V296C224 309.3 234.7 320 248 320H328C341.3 320 352 309.3 352 296V216C352 202.7 341.3 192 328 192H248z"/></svg>
+                        Home
+                    </a>
+                </li>
+                <li class="font-semibold text-lg relative">
+                    <a class="flex flex-row gap-4 before:absolute hover:before:bg-white before:w-8 before:bg-purple before:h-0.5 before:top-full before:translate-x-0 before:translate-y-0 before:transition-all before:ease-out before:duration-[350ms] before:-z-index-[1] hover:before:w-full before:mt-2" href="shop.html#">
+                        <svg class="w-[30px]" fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M0 155.2C0 147.9 2.153 140.8 6.188 134.7L81.75 21.37C90.65 8.021 105.6 0 121.7 0H518.3C534.4 0 549.3 8.021 558.2 21.37L633.8 134.7C637.8 140.8 640 147.9 640 155.2C640 175.5 623.5 192 603.2 192H36.84C16.5 192 .0003 175.5 .0003 155.2H0zM64 224H128V384H320V224H384V464C384 490.5 362.5 512 336 512H112C85.49 512 64 490.5 64 464V224zM512 224H576V480C576 497.7 561.7 512 544 512C526.3 512 512 497.7 512 480V224z"/></svg>                    
+                        Shop
+                    </a>
+                </li>
+                <li class="font-semibold text-lg relative">
+                    <a class="flex flex-row gap-4 before:absolute hover:before:bg-white before:w-8 before:bg-purple before:h-0.5 before:top-full before:translate-x-0 before:translate-y-0 before:transition-all before:ease-out before:duration-[350ms] before:-z-index-[1] hover:before:w-full before:mt-2" href="pricing.html#">
+                        <svg class="w-[30px]" fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M568.2 336.3c-13.12-17.81-38.14-21.66-55.93-8.469l-119.7 88.17h-120.6c-8.748 0-15.1-7.25-15.1-15.99c0-8.75 7.25-16 15.1-16h78.25c15.1 0 30.75-10.88 33.37-26.62c3.25-20-12.12-37.38-31.62-37.38H191.1c-26.1 0-53.12 9.25-74.12 26.25l-46.5 37.74L15.1 383.1C7.251 383.1 0 391.3 0 400v95.98C0 504.8 7.251 512 15.1 512h346.1c22.03 0 43.92-7.188 61.7-20.27l135.1-99.52C577.5 379.1 581.3 354.1 568.2 336.3zM279.3 175C271.7 173.9 261.7 170.3 252.9 167.1L248 165.4C235.5 160.1 221.8 167.5 217.4 179.1s2.121 26.2 14.59 30.64l4.655 1.656c8.486 3.061 17.88 6.095 27.39 8.312V232c0 13.25 10.73 24 23.98 24s24-10.75 24-24V221.6c25.27-5.723 42.88-21.85 46.1-45.72c8.688-50.05-38.89-63.66-64.42-70.95L288.4 103.1C262.1 95.64 263.6 92.42 264.3 88.31c1.156-6.766 15.3-10.06 32.21-7.391c4.938 .7813 11.37 2.547 19.65 5.422c12.53 4.281 26.21-2.312 30.52-14.84s-2.309-26.19-14.84-30.53c-7.602-2.627-13.92-4.358-19.82-5.721V24c0-13.25-10.75-24-24-24s-23.98 10.75-23.98 24v10.52C238.8 40.23 221.1 56.25 216.1 80.13C208.4 129.6 256.7 143.8 274.9 149.2l6.498 1.875c31.66 9.062 31.15 11.89 30.34 16.64C310.6 174.5 296.5 177.8 279.3 175z"/></svg>
+                        Pricing
+                    </a>
+                </li>
+                <li class="font-semibold text-lg relative">
+                    <a class="flex flex-row gap-4 before:absolute hover:before:bg-white before:w-8 before:bg-purple before:h-0.5 before:top-full before:translate-x-0 before:translate-y-0 before:transition-all before:ease-out before:duration-[350ms] before:-z-index-[1] hover:before:w-full before:mt-2" href="demo.html#">
+                        <svg class="w-6" fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z"/></svg>
+                        Demo
+                    </a>
+                </li>
             </ul>
         </div>
 

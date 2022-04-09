@@ -86,10 +86,22 @@ $(document).ready(function() {
 
 });
 
+nav = document.querySelector("#theNav");
+navHeight = nav.clientHeight;
+document.querySelector("#menu").style.top = navHeight + "px";
+
 function openMenu() {
     document.getElementById("menu").style.height = "100%";
+    nav.classList.add("nav-active");
+    setTimeout(function(){document.querySelector(".mobile-nav-items").classList.remove("disappear");}, 400);
+    document.querySelector(".menu-icon").setAttribute("onclick", "closeMenu()");
+    document.querySelector("body").style.overflow = "hidden";
 }
 
 function closeMenu() {
-    document.getElementById("menu").style.height = "0";
+    setTimeout(function(){document.getElementById("menu").style.height = "0";}, 300);
+    document.querySelector(".mobile-nav-items").classList.add("disappear");
+    nav.classList.remove("nav-active");
+    document.querySelector(".menu-icon").setAttribute("onclick", "openMenu()");
+    document.querySelector("body").style.overflow = "scroll";
 }
