@@ -8,67 +8,17 @@
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
     <link href="css/styles.css" type="text/css" rel="stylesheet">
-    <link href="css/nav.css" type="text/css" rel="stylesheet">
+    <link href="css/custom.css" type="text/css" rel="stylesheet">
     <link href="css/slick.css" type="text/css" rel="stylesheet">
-    <style>
-        .text-brand-gradient {
-            background: linear-gradient(144.12deg, #5F0766 5.14%, #DB9818 51.68%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        footer {
-            background: url('images/footer-pattern.svg') repeat #130113;
-        }
-
-        ::-webkit-scrollbar {
-            width: 12px;
-            height: 12px;
-        }
-        ::-webkit-scrollbar-thumb {
-            cursor: pointer;
-            background: linear-gradient(144.12deg, #5F0766 5.14%, #DB9818 51.68%);
-        }
-        ::selection {
-            background-color: #5F0766;
-            color: #fff
-        }
-        -webkit-::selection {
-            background-color: #5F0766;
-            color: #fff
-        }
-        ::-moz-selection {
-            background-color: #5F0766;
-            color: #fff
-        }
-
-        @media (max-width: 499px) {
-            .shop-slider img {
-                padding-left: auto;
-                padding-right: auto;
-            }
-        }
-
-        @media (min-width: 950px) and (max-width: 1024px) {
-            .app-demo {
-                left: 8%;
-            }
-        }
-    </style>
-
-    <script>
-        
-    </script>
 </head>
 <body class="font-lato">
     <header class="">
         <img class="absolute hidden md:block md:top-0 md:right-0 -top-[80px] -right-[200px] z-[200]" src="images/bg-lines-1.svg">
         <img class="absolute mt-[390px] z-[200]" src="images/bg-lines-2.svg">
-        <nav class="z-[300]">
+        <nav class="z-[600]">
             <div class="flex justify-between px-6 xs:px-16 lg:px-20 xl:px-28 pt-5 pb-5 border-b-[1.7px] border-opacity-50 items-center">
-                <div class="logo z-[300]">
-                  <img class="z-[300]" src="images/logo.png">
+                <div class="logo z-[500]">
+                  <img class="z-[500]" src="images/logo.png">
                 </div>
               
                 <div class="lg:flex ml-6 hidden">
@@ -88,10 +38,10 @@
                     Login
                 </button>
 
-                <div class="h-8 w-8 z-10 fixed right-14 top-8 cursor-pointer">
-                    <span class="h-0.5 w-4 block bg-black mb-1"></span>
-                    <span class="h-0.5 w-8 block bg-black mb-1"></span>
-                    <span class="h-0.5 block bg-black mb-1 w-4 float-right"></span>
+                <div class="menu-icon h-8 w-8 mr-5 cursor-pointer" onclick="openMenu()">
+                    <span class="menu-icon__line h-0.5 w-4 block bg-black mb-1 menu-icon__line-left"></span>
+                    <span class="menu-icon__line h-0.5 w-8 block bg-black mb-1"></span>
+                    <span class="menu-icon__line h-0.5 block bg-black mb-1 menu-icon__line-right w-4 float-right"></span>
                 </div>
 
                 <!-- <svg class="hamburger z-[500] flex lg:hidden w-8" onclick="openMenu()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg> -->
@@ -100,7 +50,7 @@
               </div>
         </nav>
 
-        <!-- <div id="menu" class="bg-white menu z-[999] w-full h-0 fixed left-0 top-0 overflow-hidden transition-all duration-500">
+        <div id="menu" class="bg-white menu z-[999] w-full h-0 fixed left-0 top-0 overflow-hidden transition-all duration-500">
 
             <a href="javascript:void(0)" class="absolute top-5 right-11 text-4xl" onclick="closeMenu()">&times;</a>
 
@@ -110,17 +60,6 @@
                 <li>Pricing</li>
                 <li>Demo</li>
             </ul>
-        </div> -->
-
-        <div class="nav fixed z-0">
-            <div class="nav__content">
-                <ul class="nav__list">
-                    <li class="nav__list-item">Home</li>
-                    <li class="nav__list-item">About</li>
-                    <li class="nav__list-item">Projects</li>
-                    <li class="nav__list-item">Contact</li>
-                </ul>
-            </div>
         </div>
 
         <div class="py-12 xs:py-20 md:py-24 px-5 xs:pl-14 xs:pr-12 sm:pl-16 sm:pr-14 lg:pl-20 lg:pr-16 xl:pl-28 xl:pr-20 flex justify-between slick-slider">

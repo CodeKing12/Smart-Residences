@@ -8,9 +8,155 @@
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
     <link href="css/styles.css" type="text/css" rel="stylesheet">
+    <link href="css/custom.css" type="text/css" rel="stylesheet">
 </head>
 
-<body>
+<body class="font-lato">
+    <header class="">
+        <nav class="z-[600]">
+            <div class="flex justify-between px-6 xs:px-16 lg:px-20 xl:px-28 pt-5 pb-5 border-b-[1.7px] border-opacity-50 items-center">
+                <div class="logo z-[500]">
+                  <img class="z-[500]" src="images/logo.png">
+                </div>
+              
+                <div class="lg:flex ml-6 hidden">
+                  <h4 class="font-lato lg:mr-6 xl:mr-10 font-semibold text-purple z-[300]"><a href="#"> Home </a></h4>
+                  <h4 class="font-lato lg:mr-6 xl:mr-10 font-medium z-[300]"><a href="#"> Shop </a></h4>
+                  <h4 class="font-lato lg:mr-6 xl:mr-10 font-medium z-[300]">Pricing</h4>
+                  <h4 class="font-lato font-medium z-[300]"><a href="#"> Demo </a></h4>
+                </div>
+              
+                <div class="items-center lg:flex hidden">
+                  <input class="w-56 font-lato px-5 text-sm py-2 border border-black border-opacity-30 focus-visible:outline-0 focus-visible:border-2 focus-visible:border-purple z-[300]" type="text" placeholder="Search Anything" />
+                  <span class="relative border border-opacity-40 w-px right-16 h-6"></span>
+                  <img class="relative z-[300] right-12" src="images/search.svg">
+                </div>
 
+                <button class="z-[300] px-14 py-[10px] bg-black font-normal text-white lg:flex hidden">
+                    Login
+                </button>
+
+                <div class="menu-icon block md:hidden h-8 w-8 mr-5 cursor-pointer" onclick="openMenu()">
+                    <span class="menu-icon__line h-0.5 w-4 block bg-black mb-1 menu-icon__line-left"></span>
+                    <span class="menu-icon__line h-0.5 w-8 block bg-black mb-1"></span>
+                    <span class="menu-icon__line h-0.5 block bg-black mb-1 menu-icon__line-right w-4 float-right"></span>
+                </div>
+
+                <!-- <svg class="hamburger z-[500] flex lg:hidden w-8" onclick="openMenu()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg> -->
+                <!-- <svg class="flex lg:hidden" id="svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0, 0, 400,400"><g id="svgg"><path id="path0" d="M30.630 19.942 C -6.899 28.091,-10.949 80.228,24.824 94.678 L 29.297 96.484 200.000 96.484 L 370.703 96.484 375.176 94.678 C 411.166 80.140,406.859 27.928,369.008 19.908 C 361.258 18.266,38.199 18.298,30.630 19.942 M28.516 162.416 C -10.107 173.677,-9.421 227.757,29.472 237.835 C 36.694 239.706,363.306 239.706,370.528 237.835 C 409.869 227.640,409.869 172.360,370.528 162.165 C 362.855 160.177,35.371 160.417,28.516 162.416 M26.384 304.953 C -11.082 317.748,-7.763 371.881,30.992 380.092 C 39.006 381.790,360.994 381.790,369.008 380.092 C 406.859 372.072,411.166 319.860,375.176 305.322 L 370.703 303.516 201.172 303.337 L 31.641 303.158 26.384 304.953 " stroke="none" fill="#000000" fill-rule="evenodd"></path></g></svg> -->
+                <!-- <img onclick="openmenu" class="w-10 " src="images/hamburger.png"> -->
+              </div>
+        </nav>
+
+        <div id="menu" class="bg-white menu z-[999] w-full h-0 fixed left-0 top-0 overflow-hidden transition-all duration-500">
+
+            <a href="javascript:void(0)" class="absolute top-5 right-11 text-4xl" onclick="closeMenu()">&times;</a>
+
+            <ul>
+                <li>Home</li>
+                <li>Shop</li>
+                <li>Pricing</li>
+                <li>Demo</li>
+            </ul>
+        </div>
+
+        <div class="py-12 xs:py-20 md:py-24 px-5 xs:pl-14 xs:pr-12 sm:pl-16 sm:pr-14 lg:pl-20 lg:pr-16 xl:pl-28 xl:pr-20 flex justify-between flex-col">
+            <div class="!flex justify-between flex-col sm:flex-row w-full items-center">
+                <div class="w-full sm:w-full mb-5">
+                    <div class="inline-flex lg:flex items-center">
+                        <h2 class="lg:w-4/12 !leading-normal text-[36px] sm:text-[42px] md:text-[48px] lg:text-5xl font-lato font-extrabold">Choosing Your <span class="text-purple"></span></h2>
+                        <div class="lg:w-8/12 border-t-2 h-0 border-dotted border-purple"></div>
+                    </div>
+                    <h2 class="inline ml-2 lg:ml-0 w-4/12 !leading-normal text-[36px] sm:text-[42px] md:text-[48px] lg:text-5xl font-lato font-extrabold"><span class="text-purple">Pricing</span></h2>
+                    <div class="lg:hidden border-t-2 h-0 border-dotted border-purple"></div>
+                </div>
+            </div>
+            <p class="w-11/12 sm:w-9/12 lg:w-6/12 xl:w-5/12 font-lato font-light text-lg leading-7">With all the amazing solutions we provide comes sugar-sweet pricing. You can pay monthly or yearly, whatever is best for your community's budget.</p>
+        </div>
+    </header>
+
+    <section class="flex mt-10 md:mt-2 mb-40 gap-12 justify-evenly xl:justify-center items-center px-14 flex-wrap">
+        <div class="py-9 min-w-[320px] sm:min-w-[340px] flex justify-center items-center flex-col shadow-[0px_4px_70px_0px_#5F076612;]">
+            <h5 class="uppercase font-medium text-lg mb-8 tracking-tight">Individual Plan</h5>
+            <img src="images/pricing-1.svg">
+            <h3 class="font-semibold mt-14 text-purple text-2xl">NGN 5,000<span class="font-light text-lg">/monthly</span></h3>
+            <ul class="my-8 flex flex-col items-center">
+                <li class="font-medium text-base mb-5">1000 Messages per month</li>
+                <li class="font-medium text-base mb-5">2 GB file storage</li>
+                <li class="font-medium text-base mb-5">20 Projects per month</li>
+                <li class="font-medium text-base">Premium support</li>
+            </ul>
+            <button class="flex hover:text-white font-bold items-center border-2 border-purple hover:bg-purple bg-white hover:font-semibold text-purple px-16 py-3 transition-colors hover:transition-colors duration-400 hover:duration-400">
+                Buy Now
+            </button>
+        </div>
+        <div class="py-9 min-w-[320px] sm:min-w-[340px] flex justify-center items-center flex-col shadow-[0px_4px_70px_0px_#5F076612;]">
+            <h5 class="uppercase font-medium text-lg mb-8 tracking-tight">Small Business Plan</h5>
+            <img src="images/pricing-2.svg">
+            <h3 class="font-semibold mt-14 text-purple text-2xl">NGN 50,000<span class="font-light text-lg">/annually</span></h3>
+            <ul class="my-8 flex flex-col items-center">
+                <li class="font-medium text-base mb-5">1000 Messages per month</li>
+                <li class="font-medium text-base mb-5">2 GB file storage</li>
+                <li class="font-medium text-base mb-5">20 Projects per month</li>
+                <li class="font-medium text-base">Premium support</li>
+            </ul>
+            <button class="flex hover:text-white font-bold items-center border-2 border-purple hover:bg-purple bg-white hover:font-semibold text-purple px-16 py-3 transition-colors hover:transition-colors duration-400 hover:duration-400">
+                Buy Now
+            </button>
+        </div>
+        <div class="py-9 min-w-[320px] sm:min-w-[340px] flex justify-center items-center flex-col shadow-[0px_4px_70px_0px_#5F076612;]">
+            <h5 class="uppercase font-medium text-lg mb-8 tracking-tight">Medium Company Plan</h5>
+            <img src="images/pricing-3.svg">
+            <h3 class="font-semibold mt-14 text-purple text-2xl">NGN 500,000<span class="font-light text-lg">/decade</span></h3>
+            <ul class="my-8 flex flex-col items-center">
+                <li class="font-medium text-base mb-5">1000 Messages per month</li>
+                <li class="font-medium text-base mb-5">2 GB file storage</li>
+                <li class="font-medium text-base mb-5">20 Projects per month</li>
+                <li class="font-medium text-base">Premium support</li>
+            </ul>
+            <button class="flex hover:text-white font-bold items-center border-2 border-purple hover:bg-purple bg-white hover:font-semibold text-purple px-16 py-3 transition-colors hover:transition-colors duration-400 hover:duration-400">
+                Buy Now
+            </button>            
+        </div>
+    </section>
+
+    <footer class="py-20 text-white">
+        <div class="flex flex-col">
+            <h1 class="px-6 mb-[1.4rem] font-black text-4xl md:text-5xl text-center">Get Our Latest <span class="text-[#780980]">Newsletter</span></h1>
+            <p class="px-6 font-extralight mb-9 text-lg text-center">Offer your community with the best assistance for growth</p>
+            <form class="flex flex-col gap-5 md:gap-0 md:flex-row justify-center mb-20 px-10 sm:px-14">
+                <input class="md:w-5/12 font-lato md:pl-14 peer px-5 text-base py-[14px] border border-white focus-visible:outline-0 focus-visible:border-2 focus-visible:border-purple bg-transparent" type="text" placeholder="Type in your email address">
+                <button class="flex mx-auto md:mx-0 w-fit text-base peer-focus-visible:border-purple text-white font-semibold items-center md:border border-l-0 border-white bg-purple hover:bg-white hover:font-extrabold hover:text-purple px-12 py-3 transition-colors hover:transition-colors duration-400 hover:duration-400">Subscribe</button>
+            </form>
+            <div class="border-y border-y-white mx-5 sm:mx-16 lg:mx-24 py-9 flex md:gap-7 justify-between flex-col sm:flex-row flex-wrap md:flex-nowrap px-2">
+                <div class="order-1 md:-order-none sm:w-[60%] mr-5">
+                    <img class="mb-6" src="images/logo-round.svg">
+                    <p class="mb-10 font-lato font-light text-lg tracking-wider leading-relaxed">Smart Residence is changing the way estate and street owners and street owners interact with their community and fulfill their duties with the least stress.</p>
+                    <p class="font-semibold text-lg mb-3 md:mb-0">Social Links</p>
+                    <div class="flex">
+                        <span class=" mr-5 h-fit flex items-center rounded-full p-[6px] bg-white"><img class="w-[22px] h-[22px]" src="images/facebook-purple.svg"></span>
+                        <span class=" mr-5 h-fit flex items-center rounded-full p-[6px] bg-white"><img class="w-[22px] h-[22px]" src="images/twitter-purple.svg"></span>
+                        <span class=" mr-5 h-fit flex items-center rounded-full p-[6px] bg-white"><img class="w-[22px] h-[22px]" src="images/instagram-purple.svg"></span>
+                        <span class=" mr-5 h-fit flex items-center rounded-full p-[6px] bg-white"><img class="w-[22px] h-[22px]" src="images/linkedin-purple.svg"></span>
+                    </div>
+                </div>
+                <div class="order-3 md:-order-none sm:mt-6 md:mt-0">
+                    <h4 class="font-lato font-semibold my-5 md:my-10 text-lg">Contacts</h4>
+                    <p class="mb-5 font-lato font-light text-lg tracking-wider leading-relaxed">Ikoyi Lighthouse, Banana Island, Lagos, Nigeria</p>
+                    <p class="mb-5 font-lato font-light text-lg tracking-wider leading-relaxed">+234 2882383109</p>
+                    <p class="mb-5 font-lato font-light text-lg tracking-wider leading-relaxed">smartresidence@gmail.com</p>
+                </div>
+                <div class="order-2 mt-7 sm:mt-0 md:-order-none sm:w-[30%] xl:mr-16">
+                    <h4 class="font-lato font-semibold my-5 md:my-10 text-lg">Quick Links</h4>
+                    <p class="mb-5 font-lato font-light text-lg tracking-wider leading-relaxed">Home</p>
+                    <p class="mb-5 font-lato font-light text-lg tracking-wider leading-relaxed">Shop</p>
+                    <p class="mb-5 font-lato font-light text-lg tracking-wider leading-relaxed">Demo</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
