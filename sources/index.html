@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
     <link href="css/styles.css" type="text/css" rel="stylesheet">
+    <link href="css/nav.css" type="text/css" rel="stylesheet">
     <link href="css/slick.css" type="text/css" rel="stylesheet">
     <style>
         .text-brand-gradient {
@@ -40,6 +41,19 @@
         ::-moz-selection {
             background-color: #5F0766;
             color: #fff
+        }
+
+        @media (max-width: 499px) {
+            .shop-slider img {
+                padding-left: auto;
+                padding-right: auto;
+            }
+        }
+
+        @media (min-width: 950px) and (max-width: 1024px) {
+            .app-demo {
+                left: 8%;
+            }
         }
     </style>
 
@@ -74,13 +88,19 @@
                     Login
                 </button>
 
-                <svg class="hamburger z-[500] flex lg:hidden w-8" onclick="openMenu()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+                <div class="h-8 w-8 z-10 fixed right-14 top-8 cursor-pointer">
+                    <span class="h-0.5 w-4 block bg-black mb-1"></span>
+                    <span class="h-0.5 w-8 block bg-black mb-1"></span>
+                    <span class="h-0.5 block bg-black mb-1 w-4 float-right"></span>
+                </div>
+
+                <!-- <svg class="hamburger z-[500] flex lg:hidden w-8" onclick="openMenu()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg> -->
                 <!-- <svg class="flex lg:hidden" id="svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0, 0, 400,400"><g id="svgg"><path id="path0" d="M30.630 19.942 C -6.899 28.091,-10.949 80.228,24.824 94.678 L 29.297 96.484 200.000 96.484 L 370.703 96.484 375.176 94.678 C 411.166 80.140,406.859 27.928,369.008 19.908 C 361.258 18.266,38.199 18.298,30.630 19.942 M28.516 162.416 C -10.107 173.677,-9.421 227.757,29.472 237.835 C 36.694 239.706,363.306 239.706,370.528 237.835 C 409.869 227.640,409.869 172.360,370.528 162.165 C 362.855 160.177,35.371 160.417,28.516 162.416 M26.384 304.953 C -11.082 317.748,-7.763 371.881,30.992 380.092 C 39.006 381.790,360.994 381.790,369.008 380.092 C 406.859 372.072,411.166 319.860,375.176 305.322 L 370.703 303.516 201.172 303.337 L 31.641 303.158 26.384 304.953 " stroke="none" fill="#000000" fill-rule="evenodd"></path></g></svg> -->
                 <!-- <img onclick="openmenu" class="w-10 " src="images/hamburger.png"> -->
               </div>
         </nav>
 
-        <div id="menu" class="bg-white menu z-[999] w-full h-0 fixed left-0 top-0 overflow-hidden transition-all duration-500">
+        <!-- <div id="menu" class="bg-white menu z-[999] w-full h-0 fixed left-0 top-0 overflow-hidden transition-all duration-500">
 
             <a href="javascript:void(0)" class="absolute top-5 right-11 text-4xl" onclick="closeMenu()">&times;</a>
 
@@ -90,9 +110,20 @@
                 <li>Pricing</li>
                 <li>Demo</li>
             </ul>
+        </div> -->
+
+        <div class="nav fixed z-0">
+            <div class="nav__content">
+                <ul class="nav__list">
+                    <li class="nav__list-item">Home</li>
+                    <li class="nav__list-item">About</li>
+                    <li class="nav__list-item">Projects</li>
+                    <li class="nav__list-item">Contact</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="py-14 xs:py-20 md:py-24 px-5 xs:pl-14 xs:pr-12 sm:pl-16 sm:pr-14 lg:pl-20 lg:pr-16 xl:pl-28 xl:pr-20 flex justify-between slick-slider">
+        <div class="py-12 xs:py-20 md:py-24 px-5 xs:pl-14 xs:pr-12 sm:pl-16 sm:pr-14 lg:pl-20 lg:pr-16 xl:pl-28 xl:pr-20 flex justify-between slick-slider">
             <div class="!flex justify-between flex-col sm:flex-row">
                 <div class="w-full sm:w-7/12">
                     <div class="flex header-slick">
@@ -109,26 +140,28 @@
                             <h2 class="text-[32px] sm:text-[42px] md:text-[47px] lg:text-6l font-lato leading-snug font-extrabold">Pay <span class="text-brand-gradient">Utility Bills</span><br> within your Wallet</h2>
                         </div>
                     </div>
+                    
                     <div class="flex items-center mt-8">
                         <input class="z-[300] w-full font-lato px-5 text-base py-3 border border-black border-opacity-30 focus-visible:outline-0 focus-visible:border-2 focus-visible:border-purple" required type="text" placeholder="Find a location or search an ID">
-                        <span class="z-[300] relative border border-opacity-40 w-px right-16 h-8"></span>
-                        <img class="z-[300] relative right-12" src="images/search.svg">
+                        <span class="z-[300] relative border border-opacity-40 w-px right-10 sm:right-16 h-8"></span>
+                        <img class="z-[300] relative sm:right-12 right-8" src="images/search.svg">
                     </div>
-                    <div class="flex flex-col md:flex-row mt-28 lg:mt-20 items-center">
+
+                    <div class="flex flex-row items-start justify-between sm:justify-start md:flex-row xs:mt-28 lg:mt-20 md:mt-16 sm:mt-12 mt-14 sm:items-center">
                         <button class="z-[300] flex text-white font-semibold items-center border-2 border-purple bg-purple hover:bg-white hover:text-purple group pl-12 pr-6 py-5 transition-colors hover:transition-colors duration-400 hover:duration-400">
                             Explore Us
                             <img class="ml-5 group-hover:hidden" src="images/right-arrow.svg">
                             <img class="ml-5 hidden group-hover:inline" src="images/right-arrow-light.svg">
                         </button>
-                        <div class="z-[300] ml-20 h-fit flex items-center rounded-full border border-purple hover:bg-purple group transition-all hover:transition-all duration-300 hover:duration-150">
+                        <div class="z-[300] sm:ml-20 h-fit flex items-center rounded-full border-2 border-purple hover:bg-purple group transition-all hover:transition-all duration-300 hover:duration-150">
                             <a href="#">
                                 <img class="p-6 group-hover:hidden" src="images/play.svg">
                                 <img class="p-6 hidden group-hover:inline" src="images/play-white.svg">
                             </a>
                         </div>
-                        <h4 class="z-[300] ml-6 text-base text-purple font-bold"><a href="#">Watch Video</a></h4>
+                        <h4 class="z-[300] hidden md:block ml-6 text-base text-purple font-bold"><a href="#">Watch Video</a></h4>
                     </div>
-                    <div class="flex mt-40">
+                    <div class="flex mt-32 sm:mt-28 md:mt-40">
                         <h4 class="text-purple font-medium">Connect with us:</h4>
                         <img class="ml-7" src="images/facebook.svg">
                         <img class="ml-7" src="images/twitter.svg">
@@ -136,7 +169,7 @@
                         <img class="ml-7" src="images/linkedin.svg">
                     </div>
                 </div>
-                <div class="w-full sm:w-5/12 image-slider order-first sm:order-last">
+                <div class="w-80 sm:w-5/12 image-slider order-first sm:order-last">
                     <img src="images/header-gif-1.gif">
                     <img src="images/header-img-2.svg">
                     <img src="images/header-gif-2.gif">
@@ -145,86 +178,90 @@
         </div>
     </header>
 
-    <section class="bg-[#1A001C] text-white px-24 pt-12 pb-11">
-        <div class="flex justify-between items-center">
-            <div class="w-7/12">
-                <h2 class="mb-8 text-5xl font-lato leading-snug font-extrabold"><span class="text-brand-gradient">Smart Residences</span> was Built Specifically for</h2>
+    <section class="bg-[#1A001C] text-white px-6 sm:px-24 pt-12 pb-11">
+        <div class="flex flex-col sm:flex-row justify-between items-center">
+            <div class="md:w-7/12">
+                <h2 class="mb-8 text-4xl sm:text-5xl font-lato leading-snug font-extrabold"><span class="text-brand-gradient">Smart Residences</span> was Built Specifically for</h2>
                 <p class="text-lg font-light leading-relaxed font-lato">Community chairmen, estate owners and residence owners. We aim to make life easier for the key figures in a community by providing features like community geographical markings, bill payment, levy payment, reminders etc.</p>
             </div>
-            <div class="w-4/12">
+            <div class="md:w-4/12 max-w-sm">
                 <img src="images/section-2-gif.gif" />
             </div>
         </div>
 
         <div class="flex flex-col lg:flex-row mt-1">
-            <div class="bg-white p-12 rounded-xl shadow-[0_4px_34px_rgba(255,255,255,0.3)] text-black">
+            <div class="max-w-md lg:mx-0 mt-7 bg-white px-7 py-11 sm:p-12 rounded-xl shadow-[0_4px_34px_rgba(255,255,255,0.3)] text-black">
                 <h5 class="text-lg font-bold flex mb-5">
                     Complete Control
                     <img class="ml-5" src="images/lightning.svg">
                 </h5>
-                <p class="font-lato font-light text-[17px] leading-7">Community Leaders will get complete control over the land and people they oversee.</p>
+                <p class="font-lato font-normal lg:font-light text-[17px] leading-7">Community Leaders will get complete control over the land and people they oversee.</p>
             </div>
-            <div class="-ml-5 bg-white p-12 rounded-xl shadow-[-10px_4px_64px_rgba(127,84,131,0.17)] text-black">
+            <div class="max-w-md mx-auto lg:mx-0 mt-7 lg:-ml-5 bg-white px-7 py-11 sm:p-12 rounded-xl shadow-[-10px_4px_64px_rgba(127,84,131,0.17)] text-black">
                 <h5 class="text-lg font-bold flex mb-5">
                     Easy To Use
                     <img class="ml-5" src="images/dribble.svg">
                 </h5>
-                <p class="font-lato font-light text-[17px] leading-7">Register and demarcate your community on the map. Our solutions are also on mobile.</p>
+                <p class="font-lato font-normal lg:font-light text-[17px] leading-7">Register and demarcate your community on the map. Our solutions are also on mobile.</p>
             </div>
-            <div class="-ml-5 bg-white p-12 rounded-xl shadow-[-10px_4px_64px_rgba(127,84,131,0.17)] text-black">
+            <div class="max-w-md ml-auto lg:mx-0 mt-7 lg:-ml-5 bg-white px-7 py-11 sm:p-12 rounded-xl shadow-[-10px_4px_64px_rgba(127,84,131,0.17)] text-black">
                 <h5 class="text-lg font-bold flex mb-5">
                     Customer Support
                     <img class="ml-5" src="images/headphone.svg">
                 </h5>
-                <p class="font-lato font-light text-[17px] leading-7">Our support team is available 24/7 to assist you and answer your questions.</p>
+                <p class="font-lato font-normal lg:font-light text-[17px] leading-7">Our support team is available 24/7 to assist you and answer your questions.</p>
             </div>
         </div>
     </section>
 
-    <section class="relative py-24">
+    <section class="relative py-16 sm:py-24">
         <img class="absolute bottom-0 mt-48 right-0 z-[200]" src="images/bg-lines-1.svg">
-        <h3 class="px-24 text-5xl text-center font-lato font-extrabold mb-6">Smart Residence <span class="text-purple">Features</span></h3>
-        <p class="px-24 font-lato w-10/12 text-center font-light text-lg leading-8 mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis ac ligula nullam eget id euismod neque etiam nisl. Id nulla sed elementum adipiscing sit turpis nam. Egestas pellentesque phasellus enim purus, praesent est elit enim. Pharetra at non dui nec. Sed sit etiam ac dignissim ut.</p>
+        <h3 class="px-6 sm:px-24 text-4xl leading-normal sm:text-5xl text-center font-lato font-extrabold mb-6">Smart Residence <span class="text-purple">Features</span></h3>
+        <p class="px-5 sm:px-24 font-lato w-10/12 text-justify sm:text-center font-light sm:font-light text-lg leading-8 mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis ac ligula nullam eget id euismod neque etiam nisl. Id nulla sed elementum adipiscing sit turpis nam. Egestas pellentesque phasellus enim purus, praesent est elit enim. Pharetra at non dui nec. Sed sit etiam ac dignissim ut.</p>
         
-        <div class="flex flex-col md:flex-row items-baseline mt-16 px-20">
-            <div class="flex flex-col justify-center items-center w-1/3">
+        <div class="flex flex-col md:flex-row items-baseline mt-16 px-10 sm:px-20">
+            <div class="flex flex-col justify-center items-center mb-16 lg:mb-0 lg:w-1/3">
                 <!-- <img class="w-[170px] mb-4" src="images/section-3-gif-1.gif"> -->
                 <img class="w-[170px] mb-4" src="images/section-3-img-1.svg">
                 <h3 class="text-purple leading-[50px] mb-5 text-center text-[33px] tracking-tight font-bold">Community <br/>Geofencing</h3>
-                <p class="font-lato w-10/12 text-center font-light text-lg leading-8 mx-auto">Put up a virtual fence around your community, estate or street on our map and identify residences within your boundary to make your community stand out. it is secure and reliable, easy to use & the most loved solution.</p>
+                <p class="font-lato lg:w-10/12 text-center font-light text-lg leading-8 mx-auto">Put up a virtual fence around your community, estate or street on our map and identify residences within your boundary to make your community stand out. it is secure and reliable, easy to use & the most loved solution.</p>
             </div>
-            <div class="flex flex-col justify-center items-center w-1/3">
+            <div class="flex flex-col justify-center items-center mb-16 lg:mb-0 lg:w-1/3">
                 <!-- <img class="w-[170px] mb-4" src="images/section-3-gif-2.gif"> -->
                 <img class="w-[170px] mb-4" src="images/section-3-img-2.svg">
                 <h3 class="text-purple leading-[50px] mb-5 text-center text-[33px] tracking-tight font-bold">Up-to-Date <br/>Reports</h3>
-                <p class="font-lato w-10/12 text-center font-light text-lg leading-8 mx-auto">Get up-to-date reports on payments your residents have made to the community. Know the amount of debts owed and payments that have been made along with the following: latest informations, ongoing projects in the community & with our analytics tools know the financial state of the community</p>
+                <p class="font-lato lg:w-10/12 text-center font-light text-lg leading-8 mx-auto">Get up-to-date reports on payments your residents have made to the community. Know the amount of debts owed and payments that have been made along with the following: latest informations, ongoing projects in the community & with our analytics tools know the financial state of the community</p>
             </div>
-            <div class="flex flex-col justify-center items-center w-1/3">
+            <div class="flex flex-col justify-center items-center mb-16 lg:mb-0 lg:w-1/3">
                 <!-- <img class="w-[170px] mb-4" src="images/section-3-gif-3.gif"> -->
                 <img class="w-[170px] mb-4" src="images/section-3-img-3.svg">
                 <h3 class="text-purple leading-[50px] mb-5 text-center text-[33px] tracking-tight font-bold">Interact with your <br/>Community</h3>
-                <p class="font-lato w-10/12 text-center font-light text-lg leading-8 mx-auto">Add resident’s houses and information like name, role, and street within your community fence for easy identification. You can also send bulk messages/reminders to your residents through our platform, to remind them of outstanding debts or needed fundings for projects.</p>
+                <p class="font-lato lg:w-10/12 text-center font-light text-lg leading-8 mx-auto">Add resident’s houses and information like name, role, and street within your community fence for easy identification. You can also send bulk messages/reminders to your residents through our platform, to remind them of outstanding debts or needed fundings for projects.</p>
             </div>
         </div>
     </section>
 
-    <section class="pt-16">
-        <div class="py-5 pr-44">
-            <div class="w-5/12 relative flex justify-end">
-                <img class="absolute -mr-9 -mt-7" src="images/section-4-bg-img-2.svg">
+    <section class="mt-20 pt-5 sm:pt-16">
+        <div class="py-5 px-6 md:pr-44">
+            <div class="md:w-5/12 relative hidden md:flex justify-end">
+                <img class="absolute hidden md:block md:-mr-9 mt-40 md:-mt-7" src="images/section-4-bg-img-2.svg">
             </div>
-            <div class="w-6/12 ml-auto">
-                <h3 class="font-lato font-bold text-5xl">Smart Residences <span class="font-rancho ml-4 text-5xl font-normal text-purple">App is live</span></h3>
+            <div class="relative top-0 md:w-6/12 md:ml-auto">
+                <h3 class="font-lato mb-16 md:mb-0 text-center md:text-left font-bold text-4xl md:text-5xl">Smart Residences <span class="font-rancho md:ml-4 text-5xl font-normal text-purple block md:inline">App is live</span></h3>
             </div>
         </div>
-        <div class="bg-purple relative text-white pt-12 pb-28 pr-44">
-            <img class="absolute left-0 ml-10 -top-36 -mt-20" src="images/section-4-bg-img-1.svg">
-            <img class="absolute top-0 -mt-28" src="images/app-demo.png">
-            <div class="w-6/12 ml-auto">
+        <div class="md:flex bg-purple relative text-white pt-12 px-6 md:px-0 md:pb-28 md:pr-40 pb-24">
+            <div class="md:w-6/12 hidden md:block">
+                <img class="absolute hidden md:block right-0 md:left-0 md:ml-10 -top-36 -mt-32 md:-mt-20" src="images/section-4-bg-img-1.svg">
+                <img class="relative mx-auto top-0 -mt-28 md:max-w-none" src="images/app-demo-crop.png">
+            </div>
+            <img class="absolute block md:hidden right-0 md:left-0 md:ml-10 -top-36 -mt-32 md:-mt-20" src="images/section-4-bg-img-1.svg">
+            <img class="relative block md:hidden mx-auto top-0 -mt-28 md:max-w-none" src="images/app-demo-crop.png">
+            <div class="mt-4 md:w-6/12 md:ml-auto">
                 <p class="text-xl font-light leading-8">Our support team will get assistance from AI-powered suggestions, making it quicker than ever to handle support requests. Our support team will get assistance from AI-powered suggestions.</p>
                 <p class="font-lato font-semibold my-10 text-[19px]">Available for download</p>
-                <div class="flex flex-col md:flex-row">
-                    <button class="flex items-center mr-12 border-white border rounded-md py-2 px-5 pr-16 hover:bg-white hover:border-purple hover:font-bold hover:text-purple group transition-all hover:transition-all duration-[400] hover:duration-[400]">
+                <div class="flex flex-col xl:flex-row gap-4">
+                    <button class="max-w-[265px] flex items-center md:mr-12 border-white border-2 rounded-md py-2 px-5 pr-16 hover:bg-white hover:border-purple hover:font-bold hover:text-purple group transition-all hover:transition-all duration-[400] hover:duration-[400]">
                         <img class="mr-5 group-hover:hidden" src="images/app-store.svg" />
                         <img class="mr-5 hidden group-hover:inline" src="images/app-store-purple.svg" />
                         <div class="items-start flex flex-col">
@@ -232,12 +269,12 @@
                             <p class="font-bold group-hover:font-bold text-[25px]">App Store</p>
                         </div>
                     </button>
-                    <button class="flex items-center border-white border rounded-md py-2 px-5 pr-14 hover:bg-white hover:border-purple hover:font-bold hover:text-purple group transition-all hover:transition-all duration-[400] hover:duration-[400]">
+                    <button class="max-w-[265px] flex items-center border-white border-2 rounded-md py-2 px-5 pr-14 hover:bg-white hover:border-purple hover:font-bold hover:text-purple group transition-all hover:transition-all duration-[400] hover:duration-[400]">
                         <img class="mr-5 group-hover:hidden" src="images/play-store.svg" />
                         <img class="mr-5 hidden group-hover:inline" src="images/play-store-purple.svg" />
                         <div class="items-start flex flex-col">
-                            <p class="font-light text-base">Download on</p>
-                            <p class="font-bold text-2xl">Google Play</p>
+                            <p class="font-light group-hover:font-semibold text-base">Download on</p>
+                            <p class="font-bold group-hover:font-bold text-2xl">Google Play</p>
                         </div>
                     </button>
                 </div>
@@ -245,24 +282,33 @@
         </div>
     </section>
 
-    <section class="bg-[#1E0020] text-white px-24 py-16 items-center flex bg-[url('../images/section-5-bg-img.svg')] bg-no-repeat bg-right">
-        <div class="mr-24 w-3/12">
-            <img class="w-full" src="images/sdg-goal.svg">
+    <section class="bg-[#1E0020] text-white px-7 sm:px-16 lg:px-24 py-16 items-center flex flex-col md:flex-row gap-9 lg:gap-0 bg-[url('../images/section-5-bg-img.svg')] bg-no-repeat bg-right">
+        <div class="lg:mr-24 lg:w-3/12">
+            <img class="lg:w-full mx-auto" src="images/sdg-goal.svg">
         </div>
-        <div class="w-6/12">
-            <h3 class="font-bold text-4xl mb-5">SDG Goal 11</h3>
-            <p class="text-2xl font-normal leading-relaxed">Make cities and human settlements inclusive, safe,<br> resilient and sustainable.</p>
+        <div class="lg:w-6/12">
+            <h3 class="font-bold text-3xl sm:text-4xl mb-5">SDG Goal 11</h3>
+            <p class="text-xl sm:text-2xl font-normal leading-relaxed">Make cities and human settlements inclusive, safe,<br> resilient and sustainable.</p>
         </div>
     </section>
 
-    <section class="px-24 py-20">
-        <h3 class="mb-7 font-extrabold text-4xl font-lato">Billboards At <span class="text-purple">Smart Residence</span> Shop</h3>
-        <div class="mb-[60px] border border-purple flex px-10 py-6 justify-center">
-            <!-- <img class="mr-2" src="images/sign-posts.png">
-            <img class="mr-2" src="images/address-2.png">
-            <img class="mr-2" src="images/address-1.png">
-            <img class="w-1/5" src="images/billboard-2.png"> -->
+    <section class="px-7 sm:px-20 md:px-24 py-20">
+        <h3 class="mb-7 font-extrabold text-4xl leading-tight font-lato">Billboards At <span class="text-purple">Smart Residence</span> Shop</h3>
+        <div class="border border-b-0 border-purple flex px-5 md:px-10 pt-6 pb-5 justify-center shop-slider">
+            <div class="h-8 max-h-[213px]">
+                <img class="max-h-full mx-auto xs:w-full" src="images/sign-posts.png">
+            </div>
+            <div class="h-8 max-h-[213px]">
+                <img class="max-h-full mx-auto xs:w-full" src="images/address-2.png">
+            </div>
+            <div class="h-8 max-h-[213px]">
+                <img class="max-h-full mx-auto xs:w-full" src="images/address-1.png">
+            </div>
+            <div class="h-8 max-h-[213px]">
+                <img class="max-h-full mx-auto xs:w-full" src="images/billboard-2.png">
+            </div>
         </div>
+        <div class="mb-[60px] pb-6 flex justify-center gap-5 shop-nav border border-t-0 border-purple"></div>
         <button class="flex text-white font-semibold items-center border-2 border-purple bg-purple hover:bg-white hover:font-bold hover:text-purple group px-12 py-3 transition-colors hover:transition-colors duration-400 hover:duration-400">
             Shop Now
         </button>
@@ -270,17 +316,17 @@
 
     <footer class="py-20 text-white">
         <div class="flex flex-col">
-            <h1 class="mb-[1.4rem] font-black text-5xl text-center">Get Our Latest <span class="text-[#780980]">Newsletter</span></h1>
-            <p class="font-extralight mb-9 text-lg text-center">Offer your community with the best assistance for growth</p>
-            <form class="flex justify-center mb-20">
-                <input class="w-4/12 font-lato pl-14 peer px-5 text-base py-[14px] border border-white focus-visible:outline-0 focus-visible:border-2 focus-visible:border-purple bg-transparent" type="text" placeholder="Type in your email address">
-                <button class="flex text-base peer-focus-visible:border-purple text-white font-semibold items-center border border-l-0 border-white bg-purple hover:bg-white hover:font-extrabold hover:text-purple px-12 py-3 transition-colors hover:transition-colors duration-400 hover:duration-400">Subscribe</button>
+            <h1 class="px-6 mb-[1.4rem] font-black text-4xl md:text-5xl text-center">Get Our Latest <span class="text-[#780980]">Newsletter</span></h1>
+            <p class="px-6 font-extralight mb-9 text-lg text-center">Offer your community with the best assistance for growth</p>
+            <form class="flex flex-col gap-5 md:gap-0 md:flex-row justify-center mb-20 px-10 sm:px-14">
+                <input class="md:w-5/12 font-lato md:pl-14 peer px-5 text-base py-[14px] border border-white focus-visible:outline-0 focus-visible:border-2 focus-visible:border-purple bg-transparent" type="text" placeholder="Type in your email address">
+                <button class="flex mx-auto md:mx-0 w-fit text-base peer-focus-visible:border-purple text-white font-semibold items-center md:border border-l-0 border-white bg-purple hover:bg-white hover:font-extrabold hover:text-purple px-12 py-3 transition-colors hover:transition-colors duration-400 hover:duration-400">Subscribe</button>
             </form>
-            <div class="border-y border-y-white mx-24 py-9 flex justify-between flex-col md:flex-row px-4">
-                <div class="max-w-[33%] mr-5">
+            <div class="border-y border-y-white mx-5 sm:mx-16 lg:mx-24 py-9 flex md:gap-7 justify-between flex-col sm:flex-row flex-wrap md:flex-nowrap px-2">
+                <div class="order-1 md:-order-none sm:w-[60%] mr-5">
                     <img class="mb-6" src="images/logo-round.svg">
                     <p class="mb-10 font-lato font-light text-lg tracking-wider leading-relaxed">Smart Residence is changing the way estate and street owners and street owners interact with their community and fulfill their duties with the least stress.</p>
-                    <p class="font-semibold text-lg mb-">Social Links</p>
+                    <p class="font-semibold text-lg mb-3 md:mb-0">Social Links</p>
                     <div class="flex">
                         <span class=" mr-5 h-fit flex items-center rounded-full p-[6px] bg-white"><img class="w-[22px] h-[22px]" src="images/facebook-purple.svg"></span>
                         <span class=" mr-5 h-fit flex items-center rounded-full p-[6px] bg-white"><img class="w-[22px] h-[22px]" src="images/twitter-purple.svg"></span>
@@ -288,14 +334,14 @@
                         <span class=" mr-5 h-fit flex items-center rounded-full p-[6px] bg-white"><img class="w-[22px] h-[22px]" src="images/linkedin-purple.svg"></span>
                     </div>
                 </div>
-                <div class="max-w-[33%]">
-                    <h4 class="font-lato font-semibold my-10 text-lg">Contacts</h4>
+                <div class="order-3 md:-order-none sm:mt-6 md:mt-0">
+                    <h4 class="font-lato font-semibold my-5 md:my-10 text-lg">Contacts</h4>
                     <p class="mb-5 font-lato font-light text-lg tracking-wider leading-relaxed">Ikoyi Lighthouse, Banana Island, Lagos, Nigeria</p>
                     <p class="mb-5 font-lato font-light text-lg tracking-wider leading-relaxed">+234 2882383109</p>
                     <p class="mb-5 font-lato font-light text-lg tracking-wider leading-relaxed">smartresidence@gmail.com</p>
                 </div>
-                <div class="max-w-[33%] mr-16">
-                    <h4 class="font-lato font-semibold my-10 text-lg">Quick Links</h4>
+                <div class="order-2 mt-7 sm:mt-0 md:-order-none sm:w-[30%] xl:mr-16">
+                    <h4 class="font-lato font-semibold my-5 md:my-10 text-lg">Quick Links</h4>
                     <p class="mb-5 font-lato font-light text-lg tracking-wider leading-relaxed">Home</p>
                     <p class="mb-5 font-lato font-light text-lg tracking-wider leading-relaxed">Shop</p>
                     <p class="mb-5 font-lato font-light text-lg tracking-wider leading-relaxed">Demo</p>
