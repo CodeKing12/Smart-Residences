@@ -1894,6 +1894,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 75%;
   }
 
+  .sm\:w-3\/4{
+    width: 75%;
+  }
+
   .sm\:min-w-\[340px\]{
     min-width: 340px;
   }
