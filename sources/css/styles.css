@@ -1025,6 +1025,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 20rem;
 }
 
+.max-w-lg{
+  max-width: 32rem;
+}
+
 .translate-x-0{
   --tw-translate-x: 0px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1422,6 +1426,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-48{
   padding-left: 12rem;
   padding-right: 12rem;
+}
+
+.px-0{
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .pt-5{
@@ -2124,6 +2133,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 75%;
   }
 
+  .sm\:w-10\/12{
+    width: 83.333333%;
+  }
+
   .sm\:min-w-\[340px\]{
     min-width: 340px;
   }
@@ -2167,6 +2180,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   .sm\:px-14{
     padding-left: 3.5rem;
     padding-right: 3.5rem;
+  }
+
+  .sm\:px-3{
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .sm\:px-4{
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .sm\:pl-16{
@@ -2485,12 +2508,36 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 66.666667%;
   }
 
+  .lg\:w-80{
+    width: 20rem;
+  }
+
+  .lg\:w-\[42rem\]{
+    width: 42rem;
+  }
+
+  .lg\:w-96{
+    width: 24rem;
+  }
+
+  .lg\:max-w-none{
+    max-width: none;
+  }
+
   .lg\:flex-row{
     flex-direction: row;
   }
 
+  .lg\:flex-col{
+    flex-direction: column;
+  }
+
   .lg\:gap-0{
     gap: 0px;
+  }
+
+  .lg\:gap-7{
+    gap: 1.75rem;
   }
 
   .lg\:px-20{
@@ -2501,6 +2548,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   .lg\:px-24{
     padding-left: 6rem;
     padding-right: 6rem;
+  }
+
+  .lg\:px-36{
+    padding-left: 9rem;
+    padding-right: 9rem;
+  }
+
+  .lg\:px-40{
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+
+  .lg\:px-44{
+    padding-left: 11rem;
+    padding-right: 11rem;
+  }
+
+  .lg\:px-0{
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .lg\:pl-20{
