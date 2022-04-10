@@ -9,6 +9,10 @@ footer {
   background: url('../images/footer-pattern.svg') repeat #130113;
 }
 
+.shop-hero {
+  background: linear-gradient(102.37deg, #1A001C 25.67%, rgba(26, 0, 28, 0.74105) 43.91%, rgba(26, 0, 28, 0.187333) 75.88%, rgba(26, 0, 28, 0) 105.01%), url('../images/shop-hero-bg.png');
+}
+
 ::-webkit-scrollbar {
   width: 12px;
   height: 12px;
