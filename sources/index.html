@@ -34,9 +34,9 @@
                   <img class="relative z-[300] right-12" src="images/search.svg">
                 </div>
 
-                <button class="z-[300] px-14 py-[10px] bg-black font-normal text-white lg:flex hidden">
+                <!-- <button class="z-[300] px-14 py-[10px] bg-black font-normal text-white lg:flex hidden">
                     <a href="login.html#">Login</a>
-                </button>
+                </button> -->
 
                 <div class="menu-icon block lg:hidden h-8 w-8 mr-5 hover:cursor-pointer" onclick="openMenu()">
                     <span class="menu-icon-line h-0.5 w-4 block bg-black mb-1 menu-icon-line-left"></span>
@@ -73,9 +73,6 @@
                     </a>
                 </li>
             </ul>
-            <button class="z-[300] flex text-white font-bold items-center border-2 border-white bg-purple hover:bg-white hover:text-purple px-12 py-3 transition-colors hover:transition-colors duration-[400ms] hover:duration-[400ms]">
-                <a href="login.html#">Login</a>
-            </button>
         </div>
 
         <div class="py-12 xs:py-20 md:py-24 px-5 xs:pl-14 xs:pr-12 sm:pl-16 sm:pr-14 lg:pl-20 lg:pr-16 xl:pl-28 xl:pr-20 flex justify-between slick-slider">
@@ -109,7 +106,7 @@
                             <img class="ml-5 hidden group-hover:inline" src="images/right-arrow-light.svg">
                         </button>
                         <div class="z-[300] sm:ml-auto md:ml-20 h-fit flex items-center rounded-full border-2 border-purple hover:bg-purple group transition-all hover:transition-all duration-300 hover:duration-150">
-                            <a href="#">
+                            <a href="#" data-micromodal-trigger="modal-1" onclick="showVideo()">
                                 <img class="p-6 group-hover:hidden" src="images/play.svg">
                                 <img class="p-6 hidden group-hover:inline" src="images/play-white.svg">
                             </a>
@@ -136,7 +133,7 @@
     <section class="bg-[#1A001C] text-white px-6 sm:px-24 pt-12 pb-11">
         <div class="flex flex-col sm:flex-row justify-between items-center">
             <div class="md:w-7/12">
-                <h2 class="mb-8 text-4xl sm:text-5xl font-lato leading-snug font-extrabold"><span class="text-brand-gradient">Smart Residences</span> was Built Specifically for</h2>
+                <h2 class="mb-8 text-center sm:text-left text-4xl sm:text-5xl font-lato leading-snug font-extrabold"><span class="text-brand-gradient">Smart Residences</span> was Built Specifically for</h2>
                 <p class="text-lg font-light leading-relaxed font-lato">Community chairmen, estate owners and residence owners. We aim to make life easier for the key figures in a community by providing features like community geographical markings, bill payment, levy payment, reminders etc.</p>
             </div>
             <div class="md:w-4/12 max-w-sm">
@@ -213,9 +210,9 @@
             <img class="absolute block md:hidden right-0 md:left-0 md:ml-10 -top-36 -mt-32 md:-mt-20" src="images/section-4-bg-img-1.svg">
             <img class="relative block md:hidden mx-auto top-0 -mt-28 md:max-w-none" src="images/app-demo-crop.png">
             <div class="mt-4 md:w-6/12 md:ml-auto">
-                <p class="text-xl font-light leading-8">Our support team will get assistance from AI-powered suggestions, making it quicker than ever to handle support requests. Our support team will get assistance from AI-powered suggestions.</p>
-                <p class="font-lato font-semibold my-10 text-[19px]">Available for download</p>
-                <div class="flex flex-col xl:flex-row gap-4">
+                <p class="text-xl text-center sm:text-left font-light leading-8">Our support team will get assistance from AI-powered suggestions, making it quicker than ever to handle support requests. Our support team will get assistance from AI-powered suggestions.</p>
+                <p class="font-lato text-center sm:text-left font-semibold my-10 text-[19px]">Available for download</p>
+                <div class="flex flex-col xl:flex-row gap-4 items-center md:items-start">
                     <button class="max-w-[265px] flex items-center md:mr-12 border-white border-2 rounded-md py-2 px-5 pr-16 hover:bg-white hover:border-purple hover:font-bold hover:text-purple group transition-all hover:transition-all duration-[400] hover:duration-[400]">
                         <img class="mr-5 group-hover:hidden" src="images/app-store.svg" />
                         <img class="mr-5 hidden group-hover:inline" src="images/app-store-purple.svg" />
@@ -237,6 +234,24 @@
         </div>
     </section>
 
+    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+        <main class="modal__content" id="modal-1-content relative">
+            <iframe id="sr-video" class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/VN0ueUBjeYY?enablejsapi=1" title="Smart Residence Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <span class="bg-red-600 rounded-full p-3 absolute right-5 top-8 hover:bg-white border-2 hover:border-red-600 group transition-all hover:transition-all duration-[400] hover:duration-[400] hover:cursor-pointer" onclick="closeVideo()">
+                <svg class="w-8 h-8 inline group-hover:hidden" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+                <svg class="w-8 h-8 hidden group-hover:inline" fill="rgb(220,38,38)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+            </span>
+        </main>
+        <!-- <div class="modal__footer">
+          <button class="modal__btn modal__btn-primary">Continue</button>
+          <button class="modal__btn data-custom-close" onclick="closeVideo()" data-micromodal-close aria-label="Close this dialog window">Close</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
     <section class="bg-[#1E0020] text-white px-7 sm:px-16 lg:px-24 py-16 items-center flex flex-col md:flex-row gap-9 lg:gap-0 bg-[url('../images/section-5-bg-img.svg')] bg-no-repeat bg-right">
         <div class="lg:mr-24 lg:w-3/12">
             <img class="lg:w-full mx-auto" src="images/sdg-goal.svg">
@@ -251,16 +266,24 @@
         <h3 class="mb-7 font-extrabold text-4xl leading-tight font-lato">Billboards At <span class="text-purple">Smart Residence</span> Shop</h3>
         <div class="border border-b-0 border-purple flex px-5 md:px-10 pt-6 pb-5 justify-center shop-slider">
             <div class="h-8 max-h-[213px]">
-                <img class="max-h-full mx-auto xs:w-full" src="images/sign-posts.png">
+                <a href="shop.html">
+                    <img class="max-h-full mx-auto xs:w-full" src="images/sign-posts.png">
+                </a>
             </div>
             <div class="h-8 max-h-[213px]">
-                <img class="max-h-full mx-auto xs:w-full" src="images/address-2.png">
+                <a href="shop.html">
+                    <img class="max-h-full mx-auto xs:w-full" src="images/address-2.png">
+                </a>
             </div>
             <div class="h-8 max-h-[213px]">
-                <img class="max-h-full mx-auto xs:w-full" src="images/address-1.png">
+                <a href="shop.html">
+                    <img class="max-h-full mx-auto xs:w-full" src="images/address-1.png">
+                </a>
             </div>
             <div class="h-8 max-h-[213px]">
-                <img class="max-h-full mx-auto xs:w-full" src="images/billboard-2.png">
+                <a href="shop.html">
+                    <img class="max-h-full mx-auto xs:w-full" src="images/billboard-2.png">
+                </a>
             </div>
         </div>
         <div class="mb-[60px] pb-6 flex justify-center gap-5 shop-nav border border-t-0 border-purple"></div>
@@ -297,9 +320,9 @@
                 </div>
                 <div class="order-2 mt-7 sm:mt-0 md:-order-none sm:w-[30%] xl:mr-16">
                     <h4 class="font-lato font-semibold my-5 md:my-10 text-lg">Quick Links</h4>
-                    <p class="mb-5 font-lato font-light text-lg tracking-wider leading-relaxed">Home</p>
-                    <p class="mb-5 font-lato font-light text-lg tracking-wider leading-relaxed">Shop</p>
-                    <p class="mb-5 font-lato font-light text-lg tracking-wider leading-relaxed">Demo</p>
+                    <p class="mb-5 font-lato font-light text-lg tracking-wider leading-relaxed"><a href="index.html#">Home</a></p>
+                    <p class="mb-5 font-lato font-light text-lg tracking-wider leading-relaxed"><a href="shop.html#">Shop</a></p>
+                    <p class="mb-5 font-lato font-light text-lg tracking-wider leading-relaxed"><a href="demo.html#">Demo</a></p>
                 </div>
             </div>
         </div>
@@ -308,5 +331,6 @@
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/micromodal.min.js"></script>
 </body>
 </html>
