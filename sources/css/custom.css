@@ -377,3 +377,18 @@ input[type=number] {
 .input-btn {
   font-size: 20px !important;
 }
+
+.cart-form .select-selected {
+  width: 280px;
+}
+
+@media (max-width: 619px) {
+  .product-form {
+    gap: 0;
+    flex-direction: column;
+  }
+
+  .cart-form {
+    margin-bottom: 20px;
+  }
+}
