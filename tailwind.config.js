@@ -11,6 +11,8 @@ module.exports = {
       'colors': {
         'purple': '#5F0766',
         'orange': '#FFC200',
+        'purple-2': '#3A003F',
+        'black-2': '#2F2E41'
       },
       screens: {
         'xxs': '350px',
