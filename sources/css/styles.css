@@ -1556,6 +1556,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 2.25rem;
 }
 
+.pt-14{
+  padding-top: 3.5rem;
+}
+
+.pb-20{
+  padding-bottom: 5rem;
+}
+
+.pt-10{
+  padding-top: 2.5rem;
+}
+
 .text-left{
   text-align: left;
 }

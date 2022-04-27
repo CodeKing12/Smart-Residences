@@ -75,91 +75,11 @@
         </div>
     </header>
 
-    <section class="flex justify-center py-20 px-6 xs:px-16 lg:px-20 xl:px-28">
-        <div class="lg:grid lg:grid-cols-2 flex flex-col gap-20 lg:gap-24 xl:gap-32 w-full">
-            <div class='border-purple border flex flex-col items-center py-8 px-10 h-fit'>
-                <img src="images/address-2.png" class="mb-7 w-[316px]">
-                <p class="text-lg text-[#3a003f] font-bold mb-5 lg:self-start">Related Product(s)</p>
-                <div class="flex justify-center gap-12">
-                    <div class="flex flex-col items-center">
-                        <img src="images/address-1.png" class="w-[160px]">
-                        <p class="mt-3 mb-[6px] text-sm text-[#2F2E41] text-opacity-40">Residence ID Type</p>
-                        <p class="mb-3 text-[#2F2E41] text-base font-bold">Metallic Bronze<br> Address Plate</p>
-                        <p class="font-black mb-9 text-[#3A003F] text-lg">NGN 10,000</p>
-                    </div>
-                    
-                    <div class="hidden xs:flex flex-col items-center">
-                        <img src="images/address-1.png" class="w-[160px]">
-                        <p class="mt-3 mb-[6px] text-sm text-[#2F2E41] text-opacity-40">Residence ID Type</p>
-                        <p class="mb-3 text-[#2F2E41] text-base font-bold">Metallic Bronze<br> Address Plate</p>
-                        <p class="font-black mb-9 text-[#3A003F] text-lg">NGN 10,000</p>
-                    </div>
-
-                    <div class="hidden flex-col items-center sm:flex lg:hidden xl:flex">
-                        <img src="images/address-1.png" class="w-[160px]">
-                        <p class="mt-3 mb-[6px] text-sm text-[#2F2E41] text-opacity-40">Residence ID Type</p>
-                        <p class="mb-3 text-[#2F2E41] text-base font-bold">Metallic Bronze<br> Address Plate</p>
-                        <p class="font-black mb-9 text-[#3A003F] text-lg">NGN 10,000</p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <p class="text-[#2F2E41] text-opacity-40 mb-3">Residence ID Type</p>
-                <p class="mb-10 text-[#2F2E41] text-3xl font-bold">Metallic Bronze Address Plate</p>
-                <p class="mb-3 text-base font-normal text-[#2F2E41] text-opacity-40">Description</p>
-                <p class="font-light text-lg md:pr-10">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium fermentum amet, eget cursus phasellus malesuada vestibulum. Aliquam ultrices quam ante sed feugiat. Habitant et proin vehicula interdum amet viverra lorem nisi.
-                </p>
-                <div class="flex gap-10 mt-6 mb-10">
-                    <p class="text-base font-thin"><span class="font-extrabold text-[#3a003f]">Category:</span> Address Plates</p>
-                    <p class="text-base font-thin"><span class="font-extrabold text-[#3a003f]">Tags:</span> Address, location, houses</p>
-                </div>
-                <div class="">
-                    <p class="font-normal text-lg text-[#2F2E41] text-opacity-60 mb-4">Sizes</p>
-                    <form class="custom-select custom-select-products relative mb-12">
-                        <i class="material-symbols-outlined dropdown -z-[1] absolute left-[340px] top-1/2 text-[28px] translate-x-1/2 -translate-y-1/2">arrow_drop_down</i>
-                        <select class="hidden">
-                            <option value="0">Select Dimension</option>
-                            <option value="1">Acrylic</option>
-                            <option value="2">Glass</option>
-                            <option value="3">Marble</option>
-                            <option value="4">Aluminium</option>
-                            <option value="5">Emerald</option>
-                          </select>
-                    </form>
-                    <div class="flex gap-7 lg:gap-6 md:gap-12 xl:gap-16 mb-20 flex-col md:flex-row lg:flex-col xl:flex-row">
-                        <div class="flex flex-col gap-3">
-                            <p class="font-normal text-base text-[#2F2E41] text-opacity-50">Price</p>
-                            <p class="font-black text-[#3A003F] text-4xl">NGN 10,000</p>
-                        </div>
-                        <div class="flex flex-col gap-3">
-                            <p class="font-normal text-base text-[#2F2E41] text-opacity-50">Qty</p>
-                            <div class="flex gap-3">
-                                <button onclick="decrement()" class="bg-[#f2f2f2] inline-flex justify-center items-center w-10 h-10">
-                                    <span class="material-symbols-outlined input-btn">remove</span>
-                                </button>
-                                <input class="text-center quantity-input bg-[#f2f2f2] inline-flex justify-center w-20 focus:outline-0 text-xl text-[#3a003f] font-bold" type="number" value="1">
-                                <button onclick="increment()" class="bg-[#f2f2f2] inline-flex justify-center items-center w-10 h-10">
-                                    <span class="material-symbols-outlined input-btn">add</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex flex-col md:flex-row lg:flex-col gap-6">
-                        <button class="w-[420px] max-w-full flex text-base hover:text-[#3A003F] font-bold items-center border-2 border-[#3A003F] hover:bg-white bg-[#3A003F] hover:font-semibold text-white justify-center py-5 transition-colors hover:transition-colors duration-400 hover:duration-400">
-                            Buy Now
-                        </button>
-                        <button class="w-[420px] max-w-full flex text-base hover:text-white font-bold items-center border-2 border-[#3A003F] hover:bg-[#3A003F] bg-white hover:font-semibold text-[#3A003F] justify-center py-5 transition-colors hover:transition-colors duration-400 hover:duration-400">
-                            Add to Cart
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section class="pt-10 pb-24 px-6 xs:px-16 lg:px-20 xl:px-28">
+        
     </section>
 
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>
-<!-- 871946 -->
