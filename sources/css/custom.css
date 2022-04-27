@@ -392,3 +392,23 @@ input[type=number] {
     margin-bottom: 20px;
   }
 }
+
+.custom-select-register {
+  text-align: left;
+  color: #7b7b7b !important;
+}
+
+.custom-select-register .select-selected {
+  width: 100%;
+  color: #7b7b7b !important;
+  border: 1px solid rgba(0, 0, 0, 0.3)
+}
+
+.custom-select-register .select-selected:after {
+  content: none;
+}
+
+.custom-select-register .select-items {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  max-width: 420px !important;
+}
