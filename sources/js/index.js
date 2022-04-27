@@ -188,7 +188,8 @@ for (i = 0; i < l; i++) {
     e.stopPropagation();
     closeAllSelect(this);
     this.nextSibling.classList.toggle("select-hide");
-    this.classList.toggle("select-arrow-active");
+    document.querySelector('.dropdown').classList.toggle('rotate-dropdown')
+    // this.classList.toggle("select-arrow-active");
   });
 }
 
@@ -205,6 +206,7 @@ function closeAllSelect(elmnt) {
       arrNo.push(i)
     } else {
       y[i].classList.remove("select-arrow-active");
+      document.querySelector('.dropdown').classList.remove('rotate-dropdown')
     }
   }
   for (i = 0; i < xl; i++) {
@@ -217,3 +219,16 @@ function closeAllSelect(elmnt) {
 /* If the user clicks anywhere outside the select box,
 then close all select boxes: */
 document.addEventListener("click", closeAllSelect);
+
+function increment() {
+  document.querySelector(".quantity-input").stepUp();
+}
+
+function decrement() {
+  quantity = document.querySelector(".quantity-input");
+  if (quantity.value == 0) {
+    ;
+  } else {
+    quantity.stepDown();
+  }
+}

@@ -13,6 +13,7 @@ module.exports = {
         'orange': '#FFC200',
       },
       screens: {
+        'xxs': '350px',
         'xs': '520px',
         ...defaultTheme.screens,
       }
