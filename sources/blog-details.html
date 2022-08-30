@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Residence | Login</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link href="css/styles.css" type="text/css" rel="stylesheet">
+    <link href="css/custom.css" type="text/css" rel="stylesheet">
+</head>
+
+<body class="font-lato">
+    <header class="">
+        <nav class="z-[600]" id="theNav">
+            <div class="flex justify-between px-6 xs:px-16 lg:px-20 xl:px-28 pt-5 pb-5 border-b-[1.7px] border-opacity-50 items-center">
+                <div class="logo z-[500]">
+                  <img class="z-[500]" src="images/logo.png">
+                </div>
+              
+                <div class="lg:flex ml-6 hidden">
+                  <h4 class="font-lato lg:mr-6 xl:mr-10 font-medium z-[300]"><a href="index.html#"> Home </a></h4>
+                  <h4 class="font-lato lg:mr-6 xl:mr-10 font-medium z-[300]"><a href="shop.html#"> Shop </a></h4>
+                  <h4 class="font-lato lg:mr-6 xl:mr-10 font-medium z-[300]"><a href="pricing.html#">Pricing</a></h4>
+                  <h4 class="font-lato lg:mr-6 xl:mr-10 font-medium z-[300]"><a href="demo.html#">Demo</a></h4>
+                  <h4 class="font-lato font-semibold text-purple z-[300]"><a href="blog.html#"> Blog </a></h4>
+                </div>
+              
+                <div class="items-center lg:flex hidden">
+                  <input class="w-56 font-lato px-5 text-sm py-2 border border-black border-opacity-30 focus-visible:outline-0 focus-visible:border-2 focus-visible:border-purple z-[300]" type="text" placeholder="Search Anything" />
+                  <span class="relative border border-opacity-40 w-px right-16 h-6 z-[300]"></span>
+                  <img class="relative z-[300] right-12" src="images/search.svg">
+                </div>
+
+                <a href="cart.html" class="z-[300]">
+                    <img class="w-6 lg:flex hidden z-[300]" src="images/cart.svg">
+                </a>
+
+                <button class="z-[300] px-14 py-[10px] bg-black font-normal text-white lg:flex hidden">
+                    <a href="login.html#">Login</a>
+                </button>
+
+                <div class="menu-icon block lg:hidden h-8 w-8 mr-5 hover:cursor-pointer" onclick="openMenu()">
+                    <span class="menu-icon-line h-0.5 w-4 block bg-black mb-1 menu-icon-line-left"></span>
+                    <span class="menu-icon-line h-0.5 w-8 block bg-black mb-1"></span>
+                    <span class="menu-icon-line h-0.5 block bg-black mb-1 menu-icon-line-right w-4 float-right"></span>
+                </div>
+              </div>
+        </nav>
+
+        <div id="menu" class="bg-purple text-white z-[999] w-full h-0 fixed left-0 top-0 overflow-hidden transition-all duration-500 flex flex-col items-center justify-center">
+            <ul class="mobile-nav-items opacity-100 disappear flex flex-col items-center gap-9 relative bottom-20">
+                <li class="font-semibold text-lg relative">
+                    <a class="flex flex-row gap-4 before:absolute hover:before:bg-white before:w-8 before:bg-purple before:h-0.5 before:top-full before:translate-x-0 before:translate-y-0 before:transition-all before:ease-out before:duration-[350ms] before:-z-index-[1] hover:before:w-full before:mt-2" href="index.html#">
+                        <svg class="w-[30px]" fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M575.8 255.5C575.8 273.5 560.8 287.6 543.8 287.6H511.8L512.5 447.7C512.6 483.2 483.9 512 448.5 512H128.1C92.75 512 64.09 483.3 64.09 448V287.6H32.05C14.02 287.6 0 273.5 0 255.5C0 246.5 3.004 238.5 10.01 231.5L266.4 8.016C273.4 1.002 281.4 0 288.4 0C295.4 0 303.4 2.004 309.5 7.014L416 100.7V64C416 46.33 430.3 32 448 32H480C497.7 32 512 46.33 512 64V185L564.8 231.5C572.8 238.5 576.9 246.5 575.8 255.5L575.8 255.5zM248 192C234.7 192 224 202.7 224 216V296C224 309.3 234.7 320 248 320H328C341.3 320 352 309.3 352 296V216C352 202.7 341.3 192 328 192H248z"/></svg>
+                        Home
+                    </a>
+                </li>
+                <li class="font-semibold text-lg relative">
+                    <a class="flex flex-row gap-4 before:absolute hover:before:bg-white before:w-8 before:bg-purple before:h-0.5 before:top-full before:translate-x-0 before:translate-y-0 before:transition-all before:ease-out before:duration-[350ms] before:-z-index-[1] hover:before:w-full before:mt-2" href="shop.html#">
+                        <svg class="w-[30px]" fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M0 155.2C0 147.9 2.153 140.8 6.188 134.7L81.75 21.37C90.65 8.021 105.6 0 121.7 0H518.3C534.4 0 549.3 8.021 558.2 21.37L633.8 134.7C637.8 140.8 640 147.9 640 155.2C640 175.5 623.5 192 603.2 192H36.84C16.5 192 .0003 175.5 .0003 155.2H0zM64 224H128V384H320V224H384V464C384 490.5 362.5 512 336 512H112C85.49 512 64 490.5 64 464V224zM512 224H576V480C576 497.7 561.7 512 544 512C526.3 512 512 497.7 512 480V224z"/></svg>                    
+                        Shop
+                    </a>
+                </li>
+                <li class="font-semibold text-lg relative">
+                    <a class="flex flex-row gap-4 before:absolute hover:before:bg-white before:w-8 before:bg-purple before:h-0.5 before:top-full before:translate-x-0 before:translate-y-0 before:transition-all before:ease-out before:duration-[350ms] before:-z-index-[1] hover:before:w-full before:mt-2" href="pricing.html#">
+                        <svg class="w-[30px]" fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M568.2 336.3c-13.12-17.81-38.14-21.66-55.93-8.469l-119.7 88.17h-120.6c-8.748 0-15.1-7.25-15.1-15.99c0-8.75 7.25-16 15.1-16h78.25c15.1 0 30.75-10.88 33.37-26.62c3.25-20-12.12-37.38-31.62-37.38H191.1c-26.1 0-53.12 9.25-74.12 26.25l-46.5 37.74L15.1 383.1C7.251 383.1 0 391.3 0 400v95.98C0 504.8 7.251 512 15.1 512h346.1c22.03 0 43.92-7.188 61.7-20.27l135.1-99.52C577.5 379.1 581.3 354.1 568.2 336.3zM279.3 175C271.7 173.9 261.7 170.3 252.9 167.1L248 165.4C235.5 160.1 221.8 167.5 217.4 179.1s2.121 26.2 14.59 30.64l4.655 1.656c8.486 3.061 17.88 6.095 27.39 8.312V232c0 13.25 10.73 24 23.98 24s24-10.75 24-24V221.6c25.27-5.723 42.88-21.85 46.1-45.72c8.688-50.05-38.89-63.66-64.42-70.95L288.4 103.1C262.1 95.64 263.6 92.42 264.3 88.31c1.156-6.766 15.3-10.06 32.21-7.391c4.938 .7813 11.37 2.547 19.65 5.422c12.53 4.281 26.21-2.312 30.52-14.84s-2.309-26.19-14.84-30.53c-7.602-2.627-13.92-4.358-19.82-5.721V24c0-13.25-10.75-24-24-24s-23.98 10.75-23.98 24v10.52C238.8 40.23 221.1 56.25 216.1 80.13C208.4 129.6 256.7 143.8 274.9 149.2l6.498 1.875c31.66 9.062 31.15 11.89 30.34 16.64C310.6 174.5 296.5 177.8 279.3 175z"/></svg>
+                        Pricing
+                    </a>
+                </li>
+                <li class="font-semibold text-lg relative">
+                    <a class="flex flex-row gap-4 before:absolute hover:before:bg-white before:w-8 before:bg-purple before:h-0.5 before:top-full before:translate-x-0 before:translate-y-0 before:transition-all before:ease-out before:duration-[350ms] before:-z-index-[1] hover:before:w-full before:mt-2" href="demo.html#">
+                        <svg class="w-6" fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z"/></svg>
+                        Demo
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="mt-10 max-w-7xl mx-auto text-black rounded-xl relative overflow-clip">
+            <img class="w-full max-h-[90vh] h-auto object-cover" src="images/blog-details-2.jpg">
+        </div>
+    </header>
+
+    <section class="pt-12 pb-16 px-3 sm:px-7 md:px-6 xl:px-12 max-w-screen-2xl mx-auto">
+        <h1 class="mb-6 font-extrabold text-4xl">Getting your home automated</h1>
+        <p class="text-lg tracking-normal leading-loose mb-5">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam amet tellus rhoncus felis imperdiet tristique. Dui, a a vel aliquet dictum vivamus augue. Sed et arcu facilisi velit. Penatibus adipiscing tincidunt consectetur integer luctus. Est dolor pretium placerat aliquam elementum condimentum velit tortor. Magna aliquet odio purus purus elit. Eget dignissim mauris sollicitudin cum volutpat vitae mattis suspendisse sed. Porta elit sit habitant augue urna eu netus mollis adipiscing. Ut id amet sit aliquet. Ac aliquet in ut sit tellus proin commodo. Volutpat quis est sagittis ac tellus praesent ac egestas. Ac sit cursus vestibulum cursus. Quis proin eget nunc tempus sed. Consectetur placerat at mattis nisi, amet risus. Bibendum non massa vitae diam libero, tortor magna leo. Diam natoque cursus purus quis vel massa ullamcorper bibendum ac. Molestie scelerisque consectetur mi fermentum, bibendum porttitor posuere. Odio velit nisl, sit lectus neque auctor amet, mattis. Mattis aliquet nunc, cras non viverra vestibulum, posuere viverra praesent. Viverra orci, nisl suspendisse leo justo, eros, praesent morbi. Molestie amet nulla non sit arcu arcu tortor pellentesque dignissim. Risus, eu cursus ac mauris, tincidunt mi blandit quis. Leo, ipsum elementum eget aenean semper massa pulvinar. Ante nec, ac in vitae. Volutpat tellus suscipit commodo diam. Consequat libero est nisi et bibendum. Mauris sagittis quis lectus ullamcorper lorem et sit. Suscipit vulputate ut eu molestie viverra tempus, quam. Integer sit eleifend sed eget iaculis habitant odio. Ac ac ac facilisi tempus.
+        </p>
+        <p class="font-bold mb-[6px] ml-1">Share via:</p>
+        <div class="flex">
+            <span class="cursor-pointer mr-5 h-fit flex items-center rounded-full p-[6px] bg-white"><img class="w-[22px] h-[22px]" src="images/facebook-purple.svg"></span>
+            <span class="cursor-pointer mr-5 h-fit flex items-center rounded-full p-[6px] bg-white"><img class="w-[22px] h-[22px]" src="images/twitter-purple.svg"></span>
+            <span class="cursor-pointer mr-5 h-fit flex items-center rounded-full p-[6px] bg-white"><img class="w-[22px] h-[22px]" src="images/instagram-purple.svg"></span>
+            <span class="cursor-pointer mr-5 h-fit flex items-center rounded-full p-[6px] bg-white"><img class="w-[22px] h-[22px]" src="images/linkedin-purple.svg"></span>
+        </div>
+    </section>
+
+    <section class="pt-10 pb-32 px-3 sm:px-7 md:px-6 xl:px-12 max-w-screen-2xl mx-auto">
+        <h2 class="font-extrabold text-2xl mb-5">Similar articles you may like</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8 gap-y-16 justify-items-center">
+            <div class="px-4 md:px-4 lg:px-4 pt-4 pb-4 bg-white relative max-w-[300px] rounded-xl shadow-[0px_4px_50px_rgba(0,0,0,0.05)]"> <!--border-[0.5px]-->
+                <img class="" src="images/blog-img.png"> <!--w-[277px] h-[205px]-->
+                <p class="mb-3 text-black font-lato mt-5 font-extrabold">Getting your home automated</p>
+                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus nec ipsum consequat massa diam.</p>
+                <a class="font-bold text-purple mb-2 block" href="blog-details.html">Read More...</a>
+            </div>
+            <div class="px-4 md:px-4 lg:px-4 pt-4 pb-4 bg-white relative max-w-[300px] rounded-xl shadow-[0px_4px_50px_rgba(0,0,0,0.05)]"> <!--border-[0.5px]-->
+                <img class="" src="images/blog-img.png"> <!--w-[277px] h-[205px]-->
+                <p class="mb-3 text-black font-lato mt-5 font-extrabold">Getting your home automated</p>
+                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus nec ipsum consequat massa diam.</p>
+                <a class="font-bold text-purple mb-2 block" href="blog-details.html">Read More...</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 text-white">
+        <div class="flex flex-col">
+            <h1 class="px-6 mb-[1.4rem] font-black text-4xl md:text-5xl text-center">Get Our Latest <span class="text-[#780980]">Newsletter</span></h1>
+            <p class="px-6 font-extralight mb-9 text-lg text-center">Offer your community with the best assistance for growth</p>
+            <form class="flex flex-col gap-5 md:gap-0 md:flex-row justify-center mb-20 px-10 sm:px-14">
+                <input class="md:w-5/12 font-lato md:pl-14 peer px-5 text-base py-[14px] border border-white focus-visible:outline-0 focus-visible:border-2 focus-visible:border-purple bg-transparent" type="text" placeholder="Type in your email address">
+                <button class="flex mx-auto md:mx-0 w-fit text-base peer-focus-visible:border-purple text-white font-semibold items-center md:border border-l-0 border-white bg-purple hover:bg-white hover:font-extrabold hover:text-purple px-12 py-3 transition-colors hover:transition-colors duration-400 hover:duration-400">Subscribe</button>
+            </form>
+            <div class="border-y border-y-white mx-5 sm:mx-16 lg:mx-24 py-9 flex md:gap-7 justify-between flex-col sm:flex-row flex-wrap md:flex-nowrap px-2">
+                <div class="order-1 md:-order-none sm:w-[60%] mr-5">
+                    <img class="mb-6" src="images/logo-round.svg">
+                    <p class="mb-10 font-lato font-light text-lg tracking-wider leading-relaxed">Smart Residence is changing the way estate and street owners and street owners interact with their community and fulfill their duties with the least stress.</p>
+                    <p class="font-semibold text-lg mb-3 md:mb-0">Social Links</p>
+                    <div class="flex">
+                        <span class=" mr-5 h-fit flex items-center rounded-full p-[6px] bg-white"><img class="w-[22px] h-[22px]" src="images/facebook-purple.svg"></span>
+                        <span class=" mr-5 h-fit flex items-center rounded-full p-[6px] bg-white"><img class="w-[22px] h-[22px]" src="images/twitter-purple.svg"></span>
+                        <span class=" mr-5 h-fit flex items-center rounded-full p-[6px] bg-white"><img class="w-[22px] h-[22px]" src="images/instagram-purple.svg"></span>
+                        <span class=" mr-5 h-fit flex items-center rounded-full p-[6px] bg-white"><img class="w-[22px] h-[22px]" src="images/linkedin-purple.svg"></span>
+                    </div>
+                </div>
+                <div class="order-3 md:-order-none sm:mt-6 md:mt-0">
+                    <h4 class="font-lato font-semibold my-5 md:my-10 text-lg">Contacts</h4>
+                    <p class="mb-5 font-lato font-light text-lg tracking-wider leading-relaxed">Ikoyi Lighthouse, Banana Island, Lagos, Nigeria</p>
+                    <p class="mb-5 font-lato font-light text-lg tracking-wider leading-relaxed">+234 2882383109</p>
+                    <p class="mb-5 font-lato font-light text-lg tracking-wider leading-relaxed">smartresidence@gmail.com</p>
+                </div>
+                <div class="order-2 mt-7 sm:mt-0 md:-order-none sm:w-[30%] xl:mr-16">
+                    <h4 class="font-lato font-semibold my-5 md:my-10 text-lg">Quick Links</h4>
+                    <p class="mb-5 font-lato font-light text-lg tracking-wider leading-relaxed"><a href="index.html#">Home</a></p>
+                    <p class="mb-5 font-lato font-light text-lg tracking-wider leading-relaxed"><a href="shop.html#">Shop</a></p>
+                    <p class="mb-5 font-lato font-light text-lg tracking-wider leading-relaxed"><a href="demo.html#">Demo</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

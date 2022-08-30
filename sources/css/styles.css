@@ -872,6 +872,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: -5rem;
 }
 
+.mb-\[25px\]{
+  margin-bottom: 25px;
+}
+
+.ml-1{
+  margin-left: 0.25rem;
+}
+
 .block{
   display: block;
 }
@@ -954,12 +962,36 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 205px;
 }
 
+.h-auto{
+  height: auto;
+}
+
 .max-h-\[213px\]{
   max-height: 213px;
 }
 
 .max-h-full{
   max-height: 100%;
+}
+
+.max-h-\[500px\]{
+  max-height: 500px;
+}
+
+.max-h-screen{
+  max-height: 100vh;
+}
+
+.max-h-\[75vh\]{
+  max-height: 75vh;
+}
+
+.max-h-\[100vh\]{
+  max-height: 100vh;
+}
+
+.max-h-\[90vh\]{
+  max-height: 90vh;
 }
 
 .w-56{
@@ -1140,6 +1172,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .transform{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.cursor-pointer{
+  cursor: pointer;
 }
 
 .resize{
@@ -1487,6 +1523,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-repeat: no-repeat;
 }
 
+.object-contain{
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.object-cover{
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.object-fill{
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
 .p-\[6px\]{
   padding: 6px;
 }
@@ -1764,6 +1815,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 1rem;
 }
 
+.pt-14{
+  padding-top: 3.5rem;
+}
+
+.pb-20{
+  padding-bottom: 5rem;
+}
+
+.pb-16{
+  padding-bottom: 4rem;
+}
+
 .text-left{
   text-align: left;
 }
@@ -1924,12 +1987,28 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.5 !important;
 }
 
+.leading-5{
+  line-height: 1.25rem;
+}
+
+.leading-loose{
+  line-height: 2;
+}
+
 .tracking-wider{
   letter-spacing: 0.05em;
 }
 
 .tracking-tight{
   letter-spacing: -0.025em;
+}
+
+.tracking-wide{
+  letter-spacing: 0.025em;
+}
+
+.tracking-normal{
+  letter-spacing: 0em;
 }
 
 .text-purple{
