@@ -13,6 +13,11 @@ footer {
   background: linear-gradient(102.37deg, #1A001C 25.67%, rgba(26, 0, 28, 0.74105) 43.91%, rgba(26, 0, 28, 0.187333) 75.88%, rgba(26, 0, 28, 0) 105.01%), url('../images/shop-hero-bg.png');
 }
 
+.blog-hero {
+  background: linear-gradient(15deg, #D62121 9.18%, #300061 90.82%);
+  opacity: 0.05;
+}
+
 ::-webkit-scrollbar {
   width: 12px;
   height: 12px;
